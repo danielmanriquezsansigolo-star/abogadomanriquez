@@ -14,6 +14,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
+  <!-- Script oficial de ventana emergente Google Calendar -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+
   <style>
     :root {
       --navy-950: #0b1622;
@@ -246,7 +250,6 @@
       max-width: 580px;
     }
 
-    /* Tarjeta sobria de condiciones */
     .fee-summary-card {
       background-color: var(--navy-950);
       border: 1px solid rgba(255, 255, 255, 0.16);
@@ -310,7 +313,7 @@
     }
 
     /* =========================================================
-       SECCIÓN PRINCIPAL: CALENDARIO GOOGLE + INSTRUCCIONES
+       SECCIÓN PRINCIPAL: CALENDARIO GOOGLE INTERCALADO
        ========================================================= */
     .scheduler-section {
       padding: 80px 0 92px;
@@ -319,7 +322,7 @@
 
     .scheduler-layout {
       display: grid;
-      grid-template-columns: 0.72fr 1.48fr;
+      grid-template-columns: 0.68fr 1.52fr;
       gap: 48px;
       align-items: start;
     }
@@ -421,32 +424,26 @@
       color: var(--ink-muted);
     }
 
-    .btn-external-cal {
-      display: inline-block;
-      padding: 9px 16px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      border: 1px solid var(--navy-900);
-      color: var(--navy-900);
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-
-    .btn-external-cal:hover {
-      background-color: var(--navy-900);
-      color: #ffffff;
+    /* Sobriedad para el botón emergente de Google */
+    .popup-trigger-wrap button {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.78rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      border-radius: 0 !important;
+      padding: 9px 16px !important;
+      box-shadow: none !important;
     }
 
     .calendar-iframe-box {
       width: 100%;
-      min-height: 720px;
       background-color: #ffffff;
     }
 
     .calendar-iframe-box iframe {
       width: 100%;
-      height: 720px;
+      height: 740px;
       border: 0;
       display: block;
     }
@@ -509,7 +506,6 @@
       color: var(--ink-secondary);
     }
 
-    /* Formulario sobrio de consulta previa */
     .inquiry-card {
       background-color: var(--surface);
       border: 1px solid var(--line);
@@ -743,10 +739,8 @@
         grid-template-columns: 1fr;
       }
 
-      .calendar-iframe-box,
       .calendar-iframe-box iframe {
-        min-height: 620px;
-        height: 620px;
+        height: 640px;
       }
 
       .footer-grid {
@@ -828,7 +822,7 @@
       </div>
     </section>
 
-    <!-- ==================== CALENDARIO INTEGRADO E INSTRUCCIONES ==================== -->
+    <!-- ==================== CALENDARIO GOOGLE INTERCALADO ==================== -->
     <section class="scheduler-section" id="calendario">
       <div class="container scheduler-layout">
         <!-- Columna izquierda: Protocolo -->
@@ -869,34 +863,48 @@
           </div>
         </div>
 
-        <!-- Columna derecha: Google Calendar Embed -->
+        <!-- Columna derecha: Google Calendar Appointment Scheduling -->
         <div class="calendar-wrapper">
           <div class="calendar-topbar">
             <div class="calendar-topbar-title">
               <strong>Agenda Oficial · Google Calendar</strong>
               <span>Horarios expresados en hora continental de Chile</span>
             </div>
-            <a
-              href="https://calendar.app.google/VUqEVg58heiWtyFh9"
-              target="_blank"
-              rel="noopener"
-              class="btn-external-cal"
-            >
-              Abrir agenda en pestaña nueva ↗
-            </a>
+
+            <!-- Botón oficial con ventana emergente estilizado en azul marino -->
+            <div class="popup-trigger-wrap">
+              <script>
+                (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3TjE5RfpmtQw1fYL5B9oZd_V4T2JoA3OrDolTUgDc9ZX0g0zuXZCxGXeWRawy8LP9gWjUDqCj0?gv=true',
+                      color: '#102132',
+                      label: 'Abrir en ventana emergente',
+                      target: target
+                    });
+                  });
+                })();
+              </script>
+            </div>
           </div>
 
           <div class="calendar-iframe-box">
+            <!-- Google Calendar Appointment Scheduling begin -->
             <iframe
-              src="https://calendar.app.google/VUqEVg58heiWtyFh9?gv=true"
-              title="Agenda de consultas Abogado Daniel Manríquez"
-              loading="lazy"
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3TjE5RfpmtQw1fYL5B9oZd_V4T2JoA3OrDolTUgDc9ZX0g0zuXZCxGXeWRawy8LP9gWjUDqCj0?gv=true"
+              style="border: 0"
+              width="100%"
+              height="740"
+              frameborder="0"
+              title="Agenda de citas Abogado Daniel Manríquez"
             ></iframe>
+            <!-- end Google Calendar Appointment Scheduling -->
           </div>
 
           <div class="calendar-foot">
             <span>Duración por bloque: 45 minutos · Valor: $45.000 CLP</span>
-            <span>¿No visualiza el calendario en su navegador? <a href="https://calendar.app.google/VUqEVg58heiWtyFh9" target="_blank" rel="noopener" style="color:var(--navy-900);font-weight:600;text-decoration:underline;">Acceda directamente aquí</a>.</span>
+            <span>¿Problemas de visualización? <a href="https://calendar.app.google/VUqEVg58heiWtyFh9" target="_blank" rel="noopener" style="color:var(--navy-900);font-weight:600;text-decoration:underline;">Abrir enlace directo</a>.</span>
           </div>
         </div>
       </div>
@@ -905,7 +913,6 @@
     <!-- ==================== PREGUNTAS FRECUENTES & CONSULTA PREVIA ==================== -->
     <section class="assisted-section">
       <div class="container assisted-grid">
-        <!-- Preguntas frecuentes -->
         <div class="faq-block">
           <span class="section-kicker">Información Útil</span>
           <h2>Preguntas habituales sobre la consulta</h2>
@@ -941,7 +948,6 @@
           </div>
         </div>
 
-        <!-- Formulario sobrio para coordinar o hacer una consulta directa -->
         <div class="inquiry-card">
           <span class="section-kicker">Coordinación Directa</span>
           <h3>¿Necesita escribir antes de reservar?</h3>
