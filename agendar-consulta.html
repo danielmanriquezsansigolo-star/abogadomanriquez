@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar Consulta — Abogado Manríquez</title>
+  <meta name="description" content="Reserva de consulta legal personalizada con el abogado Daniel Manríquez Sansigolo. Sesión de 45 minutos online o presencial en Santiago Centro. Honorarios: $45.000 CLP." />
+
+  <!-- Favicon -->
+  <link id="site-favicon" rel="icon" type="image/jpeg" href="ABOGADO%20MANRI%CC%81QUEZ.jpg" />
+
+  <!-- Tipografía Editorial & Corporativa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy-950: #0b1622;
+      --navy-900: #102132;
+      --navy-800: #1a324a;
+      --paper: #f7f6f2;
+      --paper-alt: #efede6;
+      --surface: #ffffff;
+      --ink: #141c24;
+      --ink-secondary: #4a5764;
+      --ink-muted: #768390;
+      --accent: #9a7b4f;
+      --line: #dcd8ce;
+      --line-dark: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       HEADER ÚNICO (7 PÁGINAS)
+       ========================================================= */
+    .site-header {
+      background-color: var(--navy-950);
+      color: #ffffff;
+      border-bottom: 1px solid var(--line-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 82px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .brand-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      color: #ffffff;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: #9fb0c2;
+      margin-top: 3px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .main-nav a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #cbd5e1;
+      padding: 6px 0;
+      position: relative;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: #ffffff;
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a.active::after {
+      width: 100%;
+    }
+
+    .main-nav a.nav-highlight {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 8px 15px;
+      color: #ffffff;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .main-nav a.nav-highlight::after {
+      display: none;
+    }
+
+    .main-nav a.nav-highlight:hover,
+    .main-nav a.nav-highlight.active {
+      background-color: #ffffff;
+      color: var(--navy-950);
+      border-color: #ffffff;
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       ENCABEZADO DE PÁGINA Y FICHA DE HONORARIOS
+       ========================================================= */
+    .booking-hero {
+      background-color: var(--navy-900);
+      color: #ffffff;
+      padding: 78px 0 84px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .booking-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .section-kicker {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .booking-hero .section-kicker {
+      color: #c5a678;
+    }
+
+    .booking-hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .rule-gold {
+      width: 56px;
+      height: 1px;
+      background-color: var(--accent);
+      margin-bottom: 22px;
+    }
+
+    .booking-hero p {
+      font-size: 1.02rem;
+      color: #cbd7e3;
+      line-height: 1.8;
+      max-width: 580px;
+    }
+
+    /* Tarjeta sobria de condiciones */
+    .fee-summary-card {
+      background-color: var(--navy-950);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 34px 32px;
+    }
+
+    .fee-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9fb0c2;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .fee-amount {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.9rem;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.05;
+      margin-bottom: 6px;
+    }
+
+    .fee-amount small {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 400;
+      color: #9fb0c2;
+    }
+
+    .fee-specs {
+      list-style: none;
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line-dark);
+      font-size: 0.86rem;
+      color: #d0dce8;
+    }
+
+    .fee-specs li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      gap: 12px;
+    }
+
+    .fee-specs li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .fee-specs span:first-child {
+      color: #8fa3b8;
+    }
+
+    .fee-specs span:last-child {
+      text-align: right;
+      font-weight: 500;
+    }
+
+    /* =========================================================
+       SECCIÓN PRINCIPAL: CALENDARIO GOOGLE + INSTRUCCIONES
+       ========================================================= */
+    .scheduler-section {
+      padding: 80px 0 92px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .scheduler-layout {
+      display: grid;
+      grid-template-columns: 0.72fr 1.48fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .protocol-panel {
+      position: sticky;
+      top: 110px;
+    }
+
+    .protocol-panel h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--navy-950);
+      margin-bottom: 14px;
+    }
+
+    .protocol-panel > p {
+      font-size: 0.92rem;
+      color: var(--ink-secondary);
+      margin-bottom: 28px;
+    }
+
+    .protocol-steps {
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .protocol-steps li {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 10px;
+    }
+
+    .p-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .protocol-steps strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--navy-950);
+      margin-bottom: 3px;
+    }
+
+    .protocol-steps span {
+      font-size: 0.84rem;
+      color: var(--ink-secondary);
+      line-height: 1.55;
+      display: block;
+    }
+
+    .office-note {
+      margin-top: 24px;
+      padding: 18px 20px;
+      background-color: var(--paper-alt);
+      border-left: 2px solid var(--accent);
+      font-size: 0.84rem;
+      color: var(--ink-secondary);
+    }
+
+    .office-note strong {
+      display: block;
+      color: var(--navy-950);
+      margin-bottom: 4px;
+    }
+
+    /* Contenedor del Calendario */
+    .calendar-wrapper {
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .calendar-topbar {
+      padding: 20px 26px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      background-color: #fbfaf8;
+    }
+
+    .calendar-topbar-title strong {
+      display: block;
+      font-size: 0.94rem;
+      color: var(--navy-950);
+    }
+
+    .calendar-topbar-title span {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    .btn-external-cal {
+      display: inline-block;
+      padding: 9px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: 1px solid var(--navy-900);
+      color: var(--navy-900);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-external-cal:hover {
+      background-color: var(--navy-900);
+      color: #ffffff;
+    }
+
+    .calendar-iframe-box {
+      width: 100%;
+      min-height: 720px;
+      background-color: #ffffff;
+    }
+
+    .calendar-iframe-box iframe {
+      width: 100%;
+      height: 720px;
+      border: 0;
+      display: block;
+    }
+
+    .calendar-foot {
+      padding: 16px 26px;
+      border-top: 1px solid var(--line);
+      background-color: #fbfaf8;
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* =========================================================
+       PREGUNTAS PREVIAS / COORDINACIÓN ASISTIDA
+       ========================================================= */
+    .assisted-section {
+      padding: 88px 0;
+      background-color: var(--paper-alt);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .assisted-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .faq-block h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 3vw, 2.55rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--navy-950);
+      margin-bottom: 24px;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-item h3 {
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: var(--navy-950);
+      margin-bottom: 6px;
+    }
+
+    .faq-item p {
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+    }
+
+    /* Formulario sobrio de consulta previa */
+    .inquiry-card {
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+      padding: 40px 36px;
+    }
+
+    .inquiry-card h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--navy-950);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .inquiry-card > p {
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+      margin-bottom: 24px;
+    }
+
+    .field-group {
+      margin-bottom: 18px;
+    }
+
+    .field-group label {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 600;
+      color: var(--navy-900);
+      margin-bottom: 7px;
+    }
+
+    .field-group input,
+    .field-group select,
+    .field-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background-color: var(--paper);
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--ink);
+      border-radius: 0;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .field-group input:focus,
+    .field-group select:focus,
+    .field-group textarea:focus {
+      outline: none;
+      border-color: var(--navy-800);
+      background-color: #ffffff;
+    }
+
+    .fee-acknowledgment {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 20px 0 24px;
+      font-size: 0.83rem;
+      color: var(--ink-secondary);
+      cursor: pointer;
+    }
+
+    .fee-acknowledgment input {
+      margin-top: 4px;
+      accent-color: var(--navy-900);
+    }
+
+    .form-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .btn-solid-navy {
+      padding: 13px 18px;
+      background-color: var(--navy-900);
+      color: #ffffff;
+      border: 1px solid var(--navy-900);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-solid-navy:hover {
+      background-color: var(--navy-950);
+    }
+
+    .btn-outline-navy {
+      padding: 13px 18px;
+      background-color: transparent;
+      color: var(--navy-900);
+      border: 1px solid var(--navy-900);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-outline-navy:hover {
+      background-color: var(--navy-900);
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       FOOTER ÚNICO (SOBRIO E INSTITUCIONAL)
+       ========================================================= */
+    .site-footer {
+      background-color: var(--navy-950);
+      color: #9fb0c2;
+      border-top: 1px solid var(--line-dark);
+      padding: 64px 0 36px;
+      font-size: 0.86rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .footer-brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .footer-list {
+      list-style: none;
+    }
+
+    .footer-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer-list a {
+      color: #9fb0c2;
+      transition: color 0.2s ease;
+    }
+
+    .footer-list a:hover {
+      color: #ffffff;
+    }
+
+    .footer-meta {
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: #6e8296;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+    @media (max-width: 1040px) {
+      .menu-btn {
+        display: inline-block;
+      }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background-color: var(--navy-950);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 5%;
+        gap: 16px;
+        border-bottom: 1px solid var(--line-dark);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .booking-hero-grid,
+      .scheduler-layout,
+      .assisted-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .protocol-panel {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .inquiry-card {
+        padding: 28px 22px;
+      }
+
+      .form-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .calendar-iframe-box,
+      .calendar-iframe-box iframe {
+        min-height: 620px;
+        height: 620px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ÚNICO ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img
+          src="ABOGADO%20MANRI%CC%81QUEZ.jpg"
+          onerror="this.onerror=null;this.src='ABOGADO%20MANR%C3%8DQUEZ.jpg';"
+          alt="Abogado Manríquez"
+          class="brand-avatar"
+        />
+        <div class="brand-titles">
+          <span class="brand-name">Abogado Manríquez</span>
+          <span class="brand-sub"><em>Daniel Manríquez Sansigolo</em> · el <em>«Abogado Manríquez»</em></span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Menú">Menú</button>
+
+      <ul class="main-nav" id="mainNav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-el-abogado.html">Sobre el Abogado</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medios.html">Medios</a></li>
+        <li><a href="videos-publicados.html">Videos Publicados</a></li>
+        <li><a href="canales-de-contacto.html">Canales de Contacto</a></li>
+        <li><a href="agendar-consulta.html" class="nav-highlight active">Agendar Consulta</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- ==================== FIN HEADER ÚNICO ==================== -->
+
+  <main>
+    <!-- ==================== ENCABEZADO Y FICHA DE HONORARIOS ==================== -->
+    <section class="booking-hero">
+      <div class="container booking-hero-grid">
+        <div>
+          <span class="section-kicker">Reserva de Atención</span>
+          <h1>Agendar consulta con el Abogado Manríquez</h1>
+          <div class="rule-gold"></div>
+          <p>
+            Seleccione directamente en la agenda oficial el día y bloque horario que mejor se acomode a su disponibilidad. La sesión es atendida personalmente por el abogado Daniel Manríquez Sansigolo para estudiar sus antecedentes, responder consultas concretas y definir una estrategia jurídica clara.
+          </p>
+        </div>
+
+        <aside class="fee-summary-card" aria-label="Condiciones de la consulta">
+          <span class="fee-label">Honorarios de Consulta</span>
+          <div class="fee-amount">
+            $45.000 <small>CLP</small>
+          </div>
+          <ul class="fee-specs">
+            <li>
+              <span>Duración de la sesión</span>
+              <span>45 minutos</span>
+            </li>
+            <li>
+              <span>Modalidad remota</span>
+              <span>Videollamada (Todo Chile)</span>
+            </li>
+            <li>
+              <span>Modalidad presencial</span>
+              <span>Santiago Centro</span>
+            </li>
+            <li>
+              <span>Profesional a cargo</span>
+              <span>Daniel Manríquez S.</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== CALENDARIO INTEGRADO E INSTRUCCIONES ==================== -->
+    <section class="scheduler-section" id="calendario">
+      <div class="container scheduler-layout">
+        <!-- Columna izquierda: Protocolo -->
+        <div class="protocol-panel">
+          <span class="section-kicker">Procedimiento</span>
+          <h2>Cómo reservar su hora</h2>
+          <p>
+            El sistema está conectado en tiempo real con mi disponibilidad semanal para evitar esperas innecesarias.
+          </p>
+
+          <ol class="protocol-steps">
+            <li>
+              <span class="p-num">01</span>
+              <div>
+                <strong>Elección de fecha y hora</strong>
+                <span>Escoja en el calendario adjunto el bloque disponible que prefiera e ingrese sus datos básicos y el motivo general de la consulta.</span>
+              </div>
+            </li>
+            <li>
+              <span class="p-num">02</span>
+              <div>
+                <strong>Confirmación y formalización</strong>
+                <span>Recibirá en su correo el respaldo de la reserva junto con las instrucciones para formalizar el pago de los honorarios ($45.000 pesos).</span>
+              </div>
+            </li>
+            <li>
+              <span class="p-num">03</span>
+              <div>
+                <strong>Envío previo de antecedentes</strong>
+                <span>Si cuenta con certificados, resoluciones, contratos o formularios de posesión efectiva, puede remitirlos antes de la reunión para aprovechar íntegramente los 45 minutos.</span>
+              </div>
+            </li>
+          </ol>
+
+          <div class="office-note">
+            <strong>Atención presencial en Santiago</strong>
+            Si prefiere asistir personalmente al estudio (Huérfanos 757, oficina 614, Santiago Centro), indíquelo en las notas al momento de agendar su bloque.
+          </div>
+        </div>
+
+        <!-- Columna derecha: Google Calendar Embed -->
+        <div class="calendar-wrapper">
+          <div class="calendar-topbar">
+            <div class="calendar-topbar-title">
+              <strong>Agenda Oficial · Google Calendar</strong>
+              <span>Horarios expresados en hora continental de Chile</span>
+            </div>
+            <a
+              href="https://calendar.app.google/VUqEVg58heiWtyFh9"
+              target="_blank"
+              rel="noopener"
+              class="btn-external-cal"
+            >
+              Abrir agenda en pestaña nueva ↗
+            </a>
+          </div>
+
+          <div class="calendar-iframe-box">
+            <iframe
+              src="https://calendar.app.google/VUqEVg58heiWtyFh9?gv=true"
+              title="Agenda de consultas Abogado Daniel Manríquez"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <div class="calendar-foot">
+            <span>Duración por bloque: 45 minutos · Valor: $45.000 CLP</span>
+            <span>¿No visualiza el calendario en su navegador? <a href="https://calendar.app.google/VUqEVg58heiWtyFh9" target="_blank" rel="noopener" style="color:var(--navy-900);font-weight:600;text-decoration:underline;">Acceda directamente aquí</a>.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PREGUNTAS FRECUENTES & CONSULTA PREVIA ==================== -->
+    <section class="assisted-section">
+      <div class="container assisted-grid">
+        <!-- Preguntas frecuentes -->
+        <div class="faq-block">
+          <span class="section-kicker">Información Útil</span>
+          <h2>Preguntas habituales sobre la consulta</h2>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>¿Qué materias se atienden en esta consulta?</h3>
+              <p>
+                Posesiones efectivas e impuesto a las herencias (SII), derecho civil y contratos (arriendos, deudas, propiedades), derecho laboral (trabajadores y empresas), derecho corporativo/societario y protección de datos personales.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>¿Vivo en regiones o fuera de Chile, puedo agendar igual?</h3>
+              <p>
+                Sí. La sesión por videollamada tiene exactamente el mismo alcance técnico que la reunión en oficina, y permite compartir pantalla para revisar en vivo expedientes del Poder Judicial, Registro Civil o Servicio de Impuestos Internos.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>¿Qué ocurre si después necesito encargar el trámite o juicio completo?</h3>
+              <p>
+                Al finalizar el diagnóstico, si su asunto requiere patrocinio judicial, redacción de escrituras o tramitación íntegra de una posesión efectiva, recibirá una propuesta formal de honorarios con etapas definidas.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>¿Dónde envío documentos para revisión previa?</h3>
+              <p>
+                Una vez agendada su hora, puede remitir la documentación relevante al correo <a href="mailto:daniel@manriquezrivera.cl" style="text-decoration:underline;color:var(--navy-900);">daniel@manriquezrivera.cl</a> indicando en el asunto su nombre y fecha de reunión.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario sobrio para coordinar o hacer una consulta directa -->
+        <div class="inquiry-card">
+          <span class="section-kicker">Coordinación Directa</span>
+          <h3>¿Necesita escribir antes de reservar?</h3>
+          <p>
+            Si requiere un horario especial para empresas, confirmar si su caso corresponde a nuestras áreas de práctica o coordinar por secretaría, envíe sus datos por este medio.
+          </p>
+
+          <form id="directInquiryForm">
+            <div class="field-group">
+              <label for="clientName">Nombre y Apellido</label>
+              <input type="text" id="clientName" placeholder="Nombre completo o razón social" required />
+            </div>
+
+            <div class="field-group">
+              <label for="clientMatter">Materia Principal</label>
+              <select id="clientMatter" required>
+                <option value="Posesiones Efectivas / Herencias">Posesiones Efectivas / Herencias</option>
+                <option value="Derecho Empresarial / Corporativo">Derecho Empresarial / Corporativo</option>
+                <option value="Derecho Civil">Derecho Civil</option>
+                <option value="Derecho Laboral">Derecho Laboral</option>
+                <option value="Protección de Datos Personales">Protección de Datos Personales</option>
+                <option value="Otra materia">Otra materia</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="clientModality">Modalidad Preferida</label>
+              <select id="clientModality" required>
+                <option value="Videollamada (Online)">Videollamada (Online)</option>
+                <option value="Presencial en Santiago Centro (Huérfanos 757, of. 614)">Presencial en Santiago Centro</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="clientSummary">Breve descripción de su consulta</label>
+              <textarea id="clientSummary" rows="3" placeholder="Indique de manera sintética en qué consiste su situación legal..." required></textarea>
+            </div>
+
+            <label class="fee-acknowledgment">
+              <input type="checkbox" id="feeConfirm" required checked />
+              <span>Tomo conocimiento de que la consulta legal personalizada tiene una duración de 45 minutos y un valor de $45.000 pesos.</span>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-solid-navy">Enviar por WhatsApp</button>
+              <button type="button" id="sendEmailBtn" class="btn-outline-navy">Enviar por Correo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ÚNICO ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-title">Abogado Manríquez</div>
+          <p style="line-height:1.7;margin-bottom:12px;">
+            Daniel Manríquez Sansigolo.<br />
+            Ejercicio privado y consultoría legal en Santiago de Chile.
+          </p>
+          <p style="font-size:0.8rem;color:#7d91a6;">
+            Huérfanos 757, oficina 614, Santiago.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Secciones</h4>
+          <ul class="footer-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-el-abogado.html">Sobre el Abogado</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="medios.html">Medios</a></li>
+            <li><a href="videos-publicados.html">Videos Publicados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atención y Firmas</h4>
+          <ul class="footer-list">
+            <li><a href="agendar-consulta.html">Agendar Consulta</a></li>
+            <li><a href="canales-de-contacto.html">Canales de Contacto</a></li>
+            <li><a href="https://legaldatos.cl" target="_blank" rel="noopener">LegalDatos.cl</a></li>
+            <li><a href="https://lextrabajador.cl" target="_blank" rel="noopener">LexTrabajador.cl</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Directo</h4>
+          <ul class="footer-list">
+            <li><a href="mailto:daniel@manriquezrivera.cl">daniel@manriquezrivera.cl</a></li>
+            <li><a href="https://wa.me/56968434272" target="_blank" rel="noopener">+56 9 6843 4272</a></li>
+            <li><a href="https://www.youtube.com/@abogadomanriquez" target="_blank" rel="noopener">YouTube · @abogadomanriquez</a></li>
+            <li><a href="https://www.instagram.com/abogadomanriquez" target="_blank" rel="noopener">Instagram · @abogadomanriquez</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <span>© 2026 Daniel Manríquez Sansigolo. Todos los derechos reservados.</span>
+        <span>Manríquez Rivera Abogados Ltda.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- ==================== FIN FOOTER ÚNICO ==================== -->
+
+  <script>
+    // Menú responsive
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      menuBtn.textContent = mainNav.classList.contains('open') ? 'Cerrar' : 'Menú';
+    });
+
+    // Respaldo automático de Favicon por codificación de tilde en GitHub
+    const favCheck = new Image();
+    favCheck.onerror = () => {
+      document.getElementById('site-favicon').href = 'ABOGADO%20MANR%C3%8DQUEZ.jpg';
+    };
+    favCheck.src = 'ABOGADO%20MANRI%CC%81QUEZ.jpg';
+
+    // Función auxiliar para construir el mensaje formal de coordinación
+    function buildInquiryText() {
+      const name = document.getElementById('clientName').value.trim();
+      const matter = document.getElementById('clientMatter').value;
+      const modality = document.getElementById('clientModality').value;
+      const summary = document.getElementById('clientSummary').value.trim();
+
+      return {
+        name,
+        matter,
+        body:
+          `Estimado Abogado Daniel Manríquez,\n\n` +
+          `Mi nombre es ${name}.\n` +
+          `Materia: ${matter}\n` +
+          `Modalidad preferida: ${modality}\n\n` +
+          `Motivo de consulta:\n${summary}\n\n` +
+          `(Confirmo estar en conocimiento de que la consulta dura 45 minutos y tiene un valor de $45.000 CLP).`
+      };
+    }
+
+    // Envío por WhatsApp
+    document.getElementById('directInquiryForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = buildInquiryText();
+      const waUrl = `https://wa.me/56968434272?text=${encodeURIComponent(data.body)}`;
+      window.open(waUrl, '_blank');
+    });
+
+    // Envío por Correo Electrónico
+    document.getElementById('sendEmailBtn').addEventListener('click', function () {
+      const form = document.getElementById('directInquiryForm');
+      if (!form.reportValidity()) return;
+      const data = buildInquiryText();
+      const subject = `Solicitud de Consulta Legal — ${data.matter} (${data.name})`;
+      window.location.href = `mailto:daniel@manriquezrivera.cl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(data.body)}`;
+    });
+  </script>
+</body>
+</html>
