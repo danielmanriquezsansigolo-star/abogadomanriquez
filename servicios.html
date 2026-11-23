@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios Jurídicos — Abogado Manríquez</title>
+  <meta name="description" content="Áreas de práctica de Daniel Manríquez Sansigolo: Posesiones Efectivas y Herencias, Derecho Civil, Derecho Laboral, Derecho Corporativo y Protección de Datos Personales (Ley 21.719)." />
+
+  <!-- Favicon -->
+  <link id="site-favicon" rel="icon" type="image/jpeg" href="ABOGADO%20MANRI%CC%81QUEZ.jpg" />
+
+  <!-- Tipografía Editorial & Corporativa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy-950: #0b1622;
+      --navy-900: #102132;
+      --navy-800: #1a324a;
+      --paper: #f7f6f2;
+      --paper-alt: #efede6;
+      --surface: #ffffff;
+      --ink: #141c24;
+      --ink-secondary: #4a5764;
+      --ink-muted: #768390;
+      --accent: #9a7b4f;
+      --line: #dcd8ce;
+      --line-dark: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       HEADER ÚNICO (7 PÁGINAS)
+       ========================================================= */
+    .site-header {
+      background-color: var(--navy-950);
+      color: #ffffff;
+      border-bottom: 1px solid var(--line-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 82px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .brand-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      color: #ffffff;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: #9fb0c2;
+      margin-top: 3px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .main-nav a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #cbd5e1;
+      padding: 6px 0;
+      position: relative;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: #ffffff;
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a.active::after {
+      width: 100%;
+    }
+
+    .main-nav a.nav-highlight {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 8px 15px;
+      color: #ffffff;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .main-nav a.nav-highlight::after {
+      display: none;
+    }
+
+    .main-nav a.nav-highlight:hover {
+      background-color: #ffffff;
+      color: var(--navy-950);
+      border-color: #ffffff;
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       ENCABEZADO DE PÁGINA
+       ========================================================= */
+    .page-hero {
+      background-color: var(--navy-900);
+      color: #ffffff;
+      padding: 80px 0 86px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .section-kicker {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .page-hero .section-kicker {
+      color: #c5a678;
+    }
+
+    .page-hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.5rem, 4.4vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.08;
+      max-width: 780px;
+      margin-bottom: 22px;
+    }
+
+    .rule-gold {
+      width: 56px;
+      height: 1px;
+      background-color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .page-hero p {
+      font-size: 1.04rem;
+      color: #cbd7e3;
+      max-width: 660px;
+      line-height: 1.8;
+    }
+
+    .quick-jump {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 38px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line-dark);
+      font-size: 0.82rem;
+      color: #9fb0c2;
+    }
+
+    .quick-jump a {
+      transition: color 0.2s ease;
+    }
+
+    .quick-jump a:hover {
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       PRÁCTICA DESTACADA: POSESIONES EFECTIVAS Y HERENCIAS
+       ========================================================= */
+    .featured-service {
+      padding: 92px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .featured-box {
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+      padding: 56px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .featured-intro h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.1rem, 3.3vw, 2.9rem);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--navy-950);
+      margin-bottom: 18px;
+    }
+
+    .featured-intro p {
+      font-size: 0.96rem;
+      color: var(--ink-secondary);
+      margin-bottom: 16px;
+    }
+
+    .featured-note {
+      margin-top: 24px;
+      padding: 18px 20px;
+      background-color: var(--paper);
+      border-left: 2px solid var(--accent);
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+    }
+
+    .featured-note strong {
+      color: var(--navy-950);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .scope-list {
+      border-top: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .scope-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+
+    .scope-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+
+    .scope-list span strong {
+      display: block;
+      font-weight: 600;
+      color: var(--navy-950);
+      margin-bottom: 2px;
+    }
+
+    .scope-list span small {
+      font-size: 0.85rem;
+      color: var(--ink-secondary);
+      display: block;
+      line-height: 1.55;
+    }
+
+    .inline-link {
+      display: inline-block;
+      margin-top: 26px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-900);
+      border-bottom: 1px solid var(--navy-900);
+      padding-bottom: 3px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .inline-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* =========================================================
+       BLOQUES DE PRÁCTICA: PERSONAS NATURALES Y EMPRESAS
+       ========================================================= */
+    .practice-section {
+      padding: 88px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .practice-section.alt-bg {
+      background-color: var(--paper-alt);
+    }
+
+    .section-intro-row {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 52px;
+    }
+
+    .section-intro-row h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 3.1vw, 2.7rem);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--navy-950);
+    }
+
+    .section-intro-row p {
+      font-size: 0.95rem;
+      color: var(--ink-secondary);
+    }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .practice-card {
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+      padding: 38px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .practice-card .card-index {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.2rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .practice-card h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--navy-950);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .practice-card > div > p {
+      font-size: 0.92rem;
+      color: var(--ink-secondary);
+      margin-bottom: 22px;
+    }
+
+    .matter-items {
+      list-style: none;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      margin-bottom: 24px;
+    }
+
+    .matter-items li {
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+      margin-bottom: 9px;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .matter-items li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .card-footer-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .card-footer-links a {
+      color: var(--navy-800);
+      transition: color 0.2s ease;
+    }
+
+    .card-footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Tarjeta corporativa de ancho completo para Datos Personales */
+    .practice-card.wide {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    /* =========================================================
+       MODALIDAD DE TRABAJO Y CONSULTA INICIAL
+       ========================================================= */
+    .methodology-section {
+      background-color: var(--navy-900);
+      color: #ffffff;
+      padding: 88px 0;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .method-grid h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .method-grid p {
+      color: #c5d3e0;
+      font-size: 0.96rem;
+      margin-bottom: 28px;
+    }
+
+    .steps-box {
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .step-row {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line-dark);
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+    }
+
+    .step-row .step-n {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      color: #c5a678;
+      font-weight: 600;
+    }
+
+    .step-row h4 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .step-row p {
+      font-size: 0.88rem;
+      color: #9fb0c2;
+      margin-bottom: 0;
+    }
+
+    .btn-editorial {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      color: var(--navy-950);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-editorial:hover {
+      background-color: transparent;
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       FOOTER ÚNICO (SOBRIO E INSTITUCIONAL)
+       ========================================================= */
+    .site-footer {
+      background-color: var(--navy-950);
+      color: #9fb0c2;
+      border-top: 1px solid var(--line-dark);
+      padding: 64px 0 36px;
+      font-size: 0.86rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .footer-brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .footer-list {
+      list-style: none;
+    }
+
+    .footer-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer-list a {
+      color: #9fb0c2;
+      transition: color 0.2s ease;
+    }
+
+    .footer-list a:hover {
+      color: #ffffff;
+    }
+
+    .footer-meta {
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: #6e8296;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+    @media (max-width: 1040px) {
+      .menu-btn {
+        display: inline-block;
+      }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background-color: var(--navy-950);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 5%;
+        gap: 16px;
+        border-bottom: 1px solid var(--line-dark);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .featured-box,
+      .section-intro-row,
+      .practice-grid,
+      .practice-card.wide,
+      .method-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .featured-box {
+        padding: 34px 26px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .practice-card {
+        padding: 28px 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ÚNICO ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img
+          src="ABOGADO%20MANRI%CC%81QUEZ.jpg"
+          onerror="this.onerror=null;this.src='ABOGADO%20MANR%C3%8DQUEZ.jpg';"
+          alt="Abogado Manríquez"
+          class="brand-avatar"
+        />
+        <div class="brand-titles">
+          <span class="brand-name">Abogado Manríquez</span>
+          <span class="brand-sub"><em>Daniel Manríquez Sansigolo</em> · el <em>«Abogado Manríquez»</em></span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Menú">Menú</button>
+
+      <ul class="main-nav" id="mainNav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-el-abogado.html">Sobre el Abogado</a></li>
+        <li><a href="servicios.html" class="active">Servicios</a></li>
+        <li><a href="medios.html">Medios</a></li>
+        <li><a href="videos-publicados.html">Videos Publicados</a></li>
+        <li><a href="canales-de-contacto.html">Canales de Contacto</a></li>
+        <li><a href="agendar-consulta.html" class="nav-highlight">Agendar Consulta</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- ==================== FIN HEADER ÚNICO ==================== -->
+
+  <main>
+    <!-- ==================== ENCABEZADO ==================== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-kicker">Áreas de Práctica</span>
+        <h1>Asesoría y representación legal para personas y empresas.</h1>
+        <div class="rule-gold"></div>
+        <p>
+          Desde la tramitación íntegra de posesiones efectivas y herencias en todo Chile hasta el patrocinio en litigios civiles, conflictos laborales, derecho societario y cumplimiento en protección de datos personales.
+        </p>
+
+        <nav class="quick-jump" aria-label="Índice de áreas">
+          <a href="#posesiones-efectivas">01 · Posesiones Efectivas y Herencias</a>
+          <a href="#personas-naturales">02 · Personas Naturales (Civil y Laboral)</a>
+          <a href="#empresas-datos">03 · Empresas, Corporativo y Datos Personales</a>
+          <a href="#modalidad">04 · Modalidad de Consulta</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ==================== 01. PRÁCTICA PRINCIPAL: POSESIONES EFECTIVAS ==================== -->
+    <section class="featured-service" id="posesiones-efectivas">
+      <div class="container">
+        <div class="featured-box">
+          <div class="featured-intro">
+            <span class="section-kicker">Práctica Principal · Sucesorio</span>
+            <h2>Posesiones Efectivas y Derecho Hereditario</h2>
+            <p>
+              Una parte sustancial de quienes llegan al estudio tras ver mis guías en YouTube buscan seguridad técnica para tramitar una herencia sin cometer errores en la valoración de bienes, declaraciones tributarias o inscripciones posteriores.
+            </p>
+            <p>
+              Asumo tanto la <strong>tramitación completa de principio a fin</strong> (para herederos en cualquier región de Chile o residentes en el extranjero) como la revisión puntual de trámites rechazados u observados ante el Registro Civil o el Servicio de Impuestos Internos.
+            </p>
+
+            <div class="featured-note">
+              <strong>Atención remota a todo Chile</strong>
+              Los trámites ante el Registro Civil, SII, Tribunales Civiles y gran parte de los Conservadores de Bienes Raíces permiten gestionar su posesión efectiva sin necesidad de trasladarse a Santiago.
+            </div>
+
+            <a href="agendar-consulta.html" class="inline-link">Agendar consulta por Posesión Efectiva →</a>
+          </div>
+
+          <div>
+            <ul class="scope-list">
+              <li>
+                <span class="scope-num">I.</span>
+                <span>
+                  <strong>Posesión Efectiva Intestada (Registro Civil)</strong>
+                  <small>Confección rigurosa del inventario valorado de bienes, ingreso en línea o presencial y subsanación de rechazos u observaciones administrativas.</small>
+                </span>
+              </li>
+              <li>
+                <span class="scope-num">II.</span>
+                <span>
+                  <strong>Posesión Efectiva Testada (Tribunales Civiles)</strong>
+                  <small>Patrocinio judicial completo cuando existe testamento otorgado en Chile o en el extranjero.</small>
+                </span>
+              </li>
+              <li>
+                <span class="scope-num">III.</span>
+                <span>
+                  <strong>Impuesto a las Herencias ante el SII (Formulario 4423)</strong>
+                  <small>Cálculo de exenciones o tramos afectos, declaración electrónica ante el Servicio de Impuestos Internos y prescripción de giros hereditarios.</small>
+                </span>
+              </li>
+              <li>
+                <span class="scope-num">IV.</span>
+                <span>
+                  <strong>Ampliaciones, Rectificaciones e Inscripciones (CBR)</strong>
+                  <small>Incorporación de bienes omitidos, inscripción especial de herencia en Conservadores de Bienes Raíces, vehículos y rescate de fondos bancarios o AFP.</small>
+                </span>
+              </li>
+              <li>
+                <span class="scope-num">V.</span>
+                <span>
+                  <strong>Partición de Herencia y Cesión de Derechos</strong>
+                  <small>Redacción de escrituras públicas de venta de consuno, cesiones de derechos hereditarios y juicios de partición cuando no existe acuerdo entre herederos.</small>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 02. PERSONAS NATURALES: CIVIL Y LABORAL ==================== -->
+    <section class="practice-section alt-bg" id="personas-naturales">
+      <div class="container">
+        <div class="section-intro-row">
+          <div>
+            <span class="section-kicker">Defensa de Personas</span>
+            <h2>Derecho Civil y Defensa Laboral</h2>
+          </div>
+          <p>
+            Representación directa para resguardar su patrimonio personal, resolver controversias contractuales o exigir el cumplimiento íntegro de sus derechos laborales ante tribunales.
+          </p>
+        </div>
+
+        <div class="practice-grid">
+          <!-- Derecho Civil -->
+          <article class="practice-card">
+            <div>
+              <span class="card-index">01</span>
+              <h3>Derecho Civil y Patrimonial</h3>
+              <p>Prevención contractual y litigación civil enfocada en inmuebles, obligaciones dinerarias, copropiedad y responsabilidad por daños.</p>
+              <ul class="matter-items">
+                <li>Juicios de arrendamiento y restitución de inmuebles (Ley N° 21.461 «Devuélveme mi casa»).</li>
+                <li>Estudio de títulos, promesas de compraventa y redacción de escrituras públicas.</li>
+                <li>Defensa ante cobros judiciales, prescripción de deudas, embargos y tercerías de posesión o dominio.</li>
+                <li>Conflictos en condominios y Ley de Copropiedad Inmobiliaria (Ley N° 21.442).</li>
+                <li>Demandas de indemnización de perjuicios por responsabilidad civil contractual y extracontractual.</li>
+              </ul>
+            </div>
+            <div class="card-footer-links">
+              <a href="agendar-consulta.html">Evaluar caso civil →</a>
+            </div>
+          </article>
+
+          <!-- Derecho Laboral (Personas) -->
+          <article class="practice-card">
+            <div>
+              <span class="card-index">02</span>
+              <h3>Derecho del Trabajo (Trabajadores)</h3>
+              <p>Patrocinio especializado para trabajadores frente a términos injustificados de contrato, vulneración de garantías o contingencias de salud laboral.</p>
+              <ul class="matter-items">
+                <li>Demandas por despido injustificado, indebido o improcedente y cobro de recargos legales.</li>
+                <li>Tramitación estratégica de autodespido (despido indirecto) por incumplimiento grave del empleador.</li>
+                <li>Denuncias de tutela de derechos fundamentales y acoso laboral o sexual (Ley Karin N° 21.643).</li>
+                <li>Indemnizaciones derivadas de accidentes del trabajo y enfermedades profesionales.</li>
+                <li>Revisión de finiquitos, reserva de derechos y nulidad del despido (Ley Bustos).</li>
+              </ul>
+            </div>
+            <div class="card-footer-links">
+              <a href="agendar-consulta.html">Evaluar caso laboral →</a>
+              <a href="https://lextrabajador.cl" target="_blank" rel="noopener">LexTrabajador.cl ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 03. EMPRESAS, CORPORATIVO Y DATOS PERSONALES ==================== -->
+    <section class="practice-section" id="empresas-datos">
+      <div class="container">
+        <div class="section-intro-row">
+          <div>
+            <span class="section-kicker">Práctica Corporativa</span>
+            <h2>Empresas, Derecho Societario y Datos Personales</h2>
+          </div>
+          <p>
+            Respaldado por un Magíster en Derecho Corporativo y experiencia supervisando normas gremiales y empresas tecnológicas, asesoro a organizaciones en su operación societaria, laboral y regulatoria.
+          </p>
+        </div>
+
+        <div class="practice-grid">
+          <!-- Derecho Corporativo / Societario -->
+          <article class="practice-card">
+            <div>
+              <span class="card-index">03</span>
+              <h3>Derecho Empresarial y Societario</h3>
+              <p>Estructuración jurídica y acompañamiento externo permanente para pymes, empresas consolidadas y compañías de software.</p>
+              <ul class="matter-items">
+                <li>Constitución, transformación, modificación de sociedades y pactos de accionistas.</li>
+                <li>Redacción y negociación de contratos comerciales, licenciamiento tecnológico, SaaS y acuerdos de confidencialidad (NDA).</li>
+                <li>Gobierno corporativo, poderes de administración y gestión documental con firma electrónica.</li>
+                <li>Prevención y cumplimiento en materias de libre competencia para asociaciones gremiales y comités técnicos.</li>
+              </ul>
+            </div>
+            <div class="card-footer-links">
+              <a href="agendar-consulta.html">Solicitar reunión corporativa →</a>
+            </div>
+          </article>
+
+          <!-- Derecho Laboral Corporativo -->
+          <article class="practice-card">
+            <div>
+              <span class="card-index">04</span>
+              <h3>Asesoría Laboral para Empresas</h3>
+              <p>Cumplimiento normativo preventivo y defensa judicial de empleadores para reducir contingencias ante la Dirección del Trabajo y tribunales.</p>
+              <ul class="matter-items">
+                <li>Redacción y actualización de contratos individuales, anexos y Reglamentos Internos de Orden, Higiene y Seguridad.</li>
+                <li>Implementación de protocolos obligatorios de prevención e investigación bajo Ley Karin y adecuación a Ley de 40 Horas.</li>
+                <li>Diseño legal de desvinculaciones, cartas de despido fundadas y comparendos ante la Inspección del Trabajo.</li>
+                <li>Defensa judicial de la empresa en juicios laborales ordinarios, monitorios y de tutela.</li>
+              </ul>
+            </div>
+            <div class="card-footer-links">
+              <a href="agendar-consulta.html">Consultar asesoría empresarial →</a>
+            </div>
+          </article>
+
+          <!-- Protección de Datos Personales (Ancho completo) -->
+          <article class="practice-card wide">
+            <div>
+              <span class="card-index">05 · División Especializada LegalDatos</span>
+              <h3>Protección de Datos Personales y Compliance Digital</h3>
+              <p style="font-size:0.94rem;color:var(--ink-secondary);margin-bottom:16px;">
+                Con la promulgación de la <strong>Ley N° 21.719</strong> (que moderniza íntegramente la Ley N° 19.628 y crea la Agencia de Protección de Datos Personales con un severo régimen de multas), las empresas que tratan datos de clientes, usuarios o trabajadores requieren adecuar sus procesos con anticipación.
+              </p>
+              <a href="https://legaldatos.cl" target="_blank" rel="noopener" class="inline-link" style="margin-top:8px;">Conocer consultora en LegalDatos.cl ↗</a>
+            </div>
+
+            <div>
+              <ul class="matter-items" style="border-top:none;padding-top:0;margin-bottom:0;">
+                <li>Diagnóstico de brechas regulatorias y levantamiento del Registro de Actividades de Tratamiento (RAT).</li>
+                <li>Redacción de Políticas de Privacidad, términos de servicio digitales, cláusulas de consentimiento y contratos de encargo de tratamiento con proveedores.</li>
+                <li>Diseño de Modelos de Prevención de Infracciones y acompañamiento en funciones de Delegado de Protección de Datos (DPO).</li>
+                <li>Alineamiento con estándares internacionales de privacidad (GDPR europeo) para empresas tecnológicas y exportadoras de servicios.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 04. MODALIDAD DE CONSULTA Y HONORARIOS ==================== -->
+    <section class="methodology-section" id="modalidad">
+      <div class="container method-grid">
+        <div>
+          <span class="section-kicker" style="color:#c5a678;">Protocolo de Atención</span>
+          <h2>¿Cómo funciona la primera consulta?</h2>
+          <p>
+            Todo encargo serio comienza con un diagnóstico jurídico honesto. En la sesión reviso personalmente sus antecedentes, respondo sus preguntas concretas y le indico con transparencia si conviene iniciar una gestión judicial o administrativa.
+          </p>
+          <a href="agendar-consulta.html" class="btn-editorial">Ir a Agendar Consulta</a>
+        </div>
+
+        <div class="steps-box">
+          <div class="step-row">
+            <span class="step-n">01</span>
+            <div>
+              <h4>Sesión de Diagnóstico · 45 Minutos ($45.000 CLP)</h4>
+              <p>Reunión privada directamente con el abogado Daniel Manríquez, vía videollamada para todo Chile o presencial en oficina de Santiago Centro (Huérfanos 757, of. 614).</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <span class="step-n">02</span>
+            <div>
+              <h4>Revisión de Documentos y Estrategia</h4>
+              <p>Análisis de certificados, contratos, resoluciones o formularios para destrabar dudas puntuales en la misma sesión o trazar los pasos procesales recomendados.</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <span class="step-n">03</span>
+            <div>
+              <h4>Propuesta Formal de Patrocinio o Tramitación</h4>
+              <p>Si el asunto requiere asumir una posesión efectiva completa, redactar contratos o representar un juicio, se entrega una propuesta escrita de honorarios con etapas claras.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ÚNICO ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-title">Abogado Manríquez</div>
+          <p style="line-height:1.7;margin-bottom:12px;">
+            Daniel Manríquez Sansigolo.<br />
+            Ejercicio privado y consultoría legal en Santiago de Chile.
+          </p>
+          <p style="font-size:0.8rem;color:#7d91a6;">
+            Huérfanos 757, oficina 614, Santiago.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Secciones</h4>
+          <ul class="footer-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-el-abogado.html">Sobre el Abogado</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="medios.html">Medios</a></li>
+            <li><a href="videos-publicados.html">Videos Publicados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atención y Firmas</h4>
+          <ul class="footer-list">
+            <li><a href="agendar-consulta.html">Agendar Consulta</a></li>
+            <li><a href="canales-de-contacto.html">Canales de Contacto</a></li>
+            <li><a href="https://legaldatos.cl" target="_blank" rel="noopener">LegalDatos.cl</a></li>
+            <li><a href="https://lextrabajador.cl" target="_blank" rel="noopener">LexTrabajador.cl</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Directo</h4>
+          <ul class="footer-list">
+            <li><a href="mailto:daniel@manriquezrivera.cl">daniel@manriquezrivera.cl</a></li>
+            <li><a href="https://wa.me/56968434272" target="_blank" rel="noopener">+56 9 6843 4272</a></li>
+            <li><a href="https://www.youtube.com/@abogadomanriquez" target="_blank" rel="noopener">YouTube · @abogadomanriquez</a></li>
+            <li><a href="https://www.instagram.com/abogadomanriquez" target="_blank" rel="noopener">Instagram · @abogadomanriquez</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <span>© 2026 Daniel Manríquez Sansigolo. Todos los derechos reservados.</span>
+        <span>Manríquez Rivera Abogados Ltda.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- ==================== FIN FOOTER ÚNICO ==================== -->
+
+  <script>
+    // Menú responsive
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      menuBtn.textContent = mainNav.classList.contains('open') ? 'Cerrar' : 'Menú';
+    });
+
+    // Respaldo automático de Favicon por codificación de tilde en GitHub
+    const favCheck = new Image();
+    favCheck.onerror = () => {
+      document.getElementById('site-favicon').href = 'ABOGADO%20MANR%C3%8DQUEZ.jpg';
+    };
+    favCheck.src = 'ABOGADO%20MANRI%CC%81QUEZ.jpg';
+  </script>
+</body>
+</html>
