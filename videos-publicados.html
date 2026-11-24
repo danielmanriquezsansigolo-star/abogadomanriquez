@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Videos Publicados — Abogado Manríquez</title>
-  <meta name="description" content="Catálogo cronológico y temático de videos educativos publicados por Daniel Manríquez Sansigolo (@abogadomanriquez): Posesiones Efectivas, Tutoriales, Derecho Civil, Laboral y Familia." />
+  <meta name="description" content="Catálogo cronológico y temático de videos publicados por Daniel Manríquez Sansigolo (@abogadomanriquez)." />
 
   <!-- Favicon -->
   <link id="site-favicon" rel="icon" type="image/jpeg" href="ABOGADO%20MANRI%CC%81QUEZ.jpg" />
@@ -69,7 +69,7 @@
     }
 
     /* =========================================================
-       HEADER ÚNICO (7 PÁGINAS)
+       HEADER ÚNICO CORREGIDO PARA CELULARES (7 PÁGINAS)
        ========================================================= */
     .site-header {
       background-color: var(--navy-950);
@@ -85,14 +85,15 @@
       align-items: center;
       justify-content: space-between;
       min-height: 82px;
-      gap: 24px;
+      gap: 12px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
-      flex-shrink: 0;
+      gap: 12px;
+      min-width: 0;
+      flex: 1;
     }
 
     .brand-avatar {
@@ -101,11 +102,13 @@
       border-radius: 50%;
       object-fit: cover;
       border: 1px solid rgba(255, 255, 255, 0.25);
+      flex-shrink: 0;
     }
 
     .brand-titles {
       display: flex;
       flex-direction: column;
+      min-width: 0;
     }
 
     .brand-name {
@@ -119,9 +122,12 @@
 
     .brand-sub {
       font-size: 0.72rem;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       color: #9fb0c2;
       margin-top: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .main-nav {
@@ -182,11 +188,13 @@
 
     .menu-btn {
       display: none;
+      flex-shrink: 0;
       background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       color: #ffffff;
       padding: 8px 12px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
+      font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       cursor: pointer;
@@ -221,7 +229,7 @@
 
     .videos-hero h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2.5rem, 4.4vw, 3.8rem);
+      font-size: clamp(2.4rem, 4.4vw, 3.8rem);
       font-weight: 600;
       line-height: 1.08;
       margin-bottom: 20px;
@@ -287,9 +295,6 @@
       background-color: var(--surface);
       border-bottom: 1px solid var(--line);
       padding: 28px 0;
-      position: sticky;
-      top: 82px;
-      z-index: 80;
     }
 
     .filter-pills {
@@ -330,18 +335,19 @@
 
     .search-sort-bar {
       display: grid;
-      grid-template-columns: 1fr 250px;
+      grid-template-columns: 1fr 260px;
       gap: 16px;
       align-items: center;
     }
 
-    .search-input-wrap input {
+    .search-input-wrap input,
+    .sort-select-wrap select {
       width: 100%;
       padding: 11px 14px;
       border: 1px solid var(--line);
       background-color: var(--paper);
       font-family: inherit;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--ink);
     }
 
@@ -352,23 +358,11 @@
       background-color: #ffffff;
     }
 
-    .sort-select-wrap select {
-      width: 100%;
-      padding: 11px 14px;
-      border: 1px solid var(--line);
-      background-color: var(--paper);
-      font-family: inherit;
-      font-size: 0.86rem;
-      font-weight: 500;
-      color: var(--navy-950);
-      cursor: pointer;
-    }
-
     /* =========================================================
-       GRILLA DE PUBLICACIONES
+       GRILLA COMPLETA DE VIDEOS
        ========================================================= */
     .catalog-section {
-      padding: 56px 0 96px;
+      padding: 52px 0 96px;
       flex: 1;
     }
 
@@ -376,6 +370,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
       font-size: 0.84rem;
       color: var(--ink-muted);
       margin-bottom: 28px;
@@ -396,7 +392,6 @@
       flex-direction: column;
       justify-content: space-between;
       transition: border-color 0.25s ease, transform 0.25s ease;
-      cursor: pointer;
     }
 
     .video-item:hover {
@@ -410,6 +405,7 @@
       background-color: var(--navy-900);
       overflow: hidden;
       border-bottom: 1px solid var(--line);
+      cursor: pointer;
     }
 
     .video-cover img {
@@ -421,41 +417,6 @@
 
     .video-item:hover .video-cover img {
       transform: scale(1.03);
-    }
-
-    /* Portada tipográfica sobria para videos de archivo sin miniatura directa */
-    .editorial-cover {
-      width: 100%;
-      height: 100%;
-      padding: 22px 24px;
-      background: linear-gradient(145deg, var(--navy-950) 0%, var(--navy-900) 65%, #162d44 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #ffffff;
-    }
-
-    .editorial-cover-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #c5a678;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      padding-bottom: 8px;
-    }
-
-    .editorial-cover-title {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.22rem;
-      line-height: 1.22;
-      color: #f1f5f9;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
 
     .duration-tag {
@@ -495,6 +456,7 @@
       line-height: 1.24;
       color: var(--navy-950);
       margin-bottom: 16px;
+      cursor: pointer;
     }
 
     .video-meta-row {
@@ -503,42 +465,40 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 10px;
       font-size: 0.78rem;
       color: var(--ink-muted);
     }
 
-    .watch-cta {
-      font-weight: 600;
-      color: var(--navy-900);
-      letter-spacing: 0.03em;
+    .video-actions-inline {
+      display: flex;
+      gap: 12px;
+      align-items: center;
     }
 
-    .load-more-wrap {
-      text-align: center;
-      margin-top: 48px;
-    }
-
-    .btn-load-more {
-      padding: 14px 32px;
-      background-color: transparent;
-      border: 1px solid var(--navy-900);
-      color: var(--navy-900);
+    .btn-play-here {
+      background: none;
+      border: none;
       font-family: inherit;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      color: var(--navy-900);
       cursor: pointer;
-      transition: background-color 0.2s ease, color 0.2s ease;
+      padding: 0;
     }
 
-    .btn-load-more:hover {
-      background-color: var(--navy-900);
-      color: #ffffff;
+    .btn-play-here:hover {
+      color: var(--accent);
+    }
+
+    .link-yt-direct {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      text-decoration: underline;
     }
 
     /* =========================================================
-       MODAL REPRODUCTOR INTEGRADO (PARA VIDEOS CON ID DIRECTO)
+       MODAL REPRODUCTOR INTEGRADO
        ========================================================= */
     .video-modal {
       display: none;
@@ -548,7 +508,7 @@
       background-color: rgba(11, 22, 34, 0.88);
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 20px;
     }
 
     .video-modal.open {
@@ -588,6 +548,7 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       cursor: pointer;
+      flex-shrink: 0;
     }
 
     .modal-player {
@@ -625,7 +586,7 @@
     }
 
     /* =========================================================
-       FOOTER ÚNICO (SOBRIO E INSTITUCIONAL)
+       FOOTER ÚNICO
        ========================================================= */
     .site-footer {
       background-color: var(--navy-950);
@@ -688,7 +649,7 @@
     }
 
     /* =========================================================
-       RESPONSIVE
+       RESPONSIVE (INCLUYE CORRECCIÓN MÓVIL DEL MENÚ)
        ========================================================= */
     @media (max-width: 1040px) {
       .menu-btn {
@@ -707,6 +668,7 @@
         padding: 24px 5%;
         gap: 16px;
         border-bottom: 1px solid var(--line-dark);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
       }
 
       .main-nav.open {
@@ -722,10 +684,6 @@
       .videos-hero-grid {
         grid-template-columns: 1fr;
         gap: 32px;
-      }
-
-      .catalog-controls {
-        position: static;
       }
 
       .search-sort-bar {
@@ -744,6 +702,23 @@
 
       .footer-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-inner {
+        min-height: 70px;
+      }
+      .brand-name {
+        font-size: 1.15rem;
+      }
+      .brand-sub {
+        font-size: 0.64rem;
+        white-space: normal;
+        line-height: 1.25;
+      }
+      .main-nav {
+        top: 70px;
       }
     }
   </style>
@@ -790,33 +765,31 @@
           <h1>Videos publicados y guías legales ciudadanas.</h1>
           <div class="rule-gold"></div>
           <p>
-            Registro cronológico de cápsulas explicativas, tutoriales prácticos y análisis jurídicos publicados en el canal oficial <strong>@abogadomanriquez</strong>. Utilice los filtros por materia o el buscador para encontrar rápidamente el tema de su interés.
+            Registro actualizado automáticamente desde el repertorio oficial del canal <strong>@abogadomanriquez</strong>. Filtre según la materia jurídica de su interés o reproduzca directamente aquí cada guía paso a paso.
           </p>
         </div>
 
         <aside class="channel-summary-box">
           <span class="ch-handle">@abogadomanriquez</span>
-          <span class="ch-stats">Más de 15.400 suscriptores · Archivo de educación legal en Chile</span>
+          <span class="ch-stats">Educación cívica y análisis legal en YouTube</span>
           <a href="https://www.youtube.com/@abogadomanriquez/videos" target="_blank" rel="noopener" class="btn-channel-ext">
-            Visitar canal en YouTube ↗
+            Abrir canal en YouTube ↗
           </a>
         </aside>
       </div>
     </section>
 
-    <!-- ==================== BARRA DE FILTROS, BUSCADOR Y ORDEN ==================== -->
+    <!-- ==================== BARRA DE FILTROS Y ORDEN ==================== -->
     <section class="catalog-controls" aria-label="Filtros de videos">
       <div class="container">
-        <div class="filter-pills" id="categoryPills">
-          <!-- Botones generados dinámicamente con conteo exacto -->
-        </div>
+        <div class="filter-pills" id="categoryPills"></div>
 
         <div class="search-sort-bar">
           <div class="search-input-wrap">
             <input
               type="search"
               id="videoSearch"
-              placeholder="Buscar por palabra clave (ej. posesión efectiva, SII, embargo, despido, alimentos, arriendo)..."
+              placeholder="Buscar video por tema (ej. posesión efectiva, SII, renuncia de gananciales, CAE)..."
               aria-label="Buscar videos"
             />
           </div>
@@ -824,7 +797,7 @@
           <div class="sort-select-wrap">
             <select id="videoSort" aria-label="Ordenar videos">
               <option value="recent">Orden: Más recientes primero</option>
-              <option value="popular">Orden: Más vistos (Populares)</option>
+              <option value="popular">Orden: Más vistos primero</option>
               <option value="oldest">Orden: Más antiguos primero</option>
             </select>
           </div>
@@ -832,24 +805,20 @@
       </div>
     </section>
 
-    <!-- ==================== CATÁLOGO DE VIDEOS ==================== -->
+    <!-- ==================== LISTADO COMPLETO ==================== -->
     <section class="catalog-section">
       <div class="container">
         <div class="results-status">
-          <span id="resultsCounter">Mostrando publicaciones...</span>
-          <span>¿Necesita atención directa sobre alguno de estos temas? <a href="agendar-consulta.html" style="color:var(--navy-900);font-weight:600;text-decoration:underline;">Agendar consulta ($45.000)</a></span>
+          <span id="resultsCounter">Cargando repertorio de videos...</span>
+          <span>¿Necesita evaluar su caso en privado? <a href="agendar-consulta.html" style="color:var(--navy-900);font-weight:600;text-decoration:underline;">Agendar consulta ($45.000)</a></span>
         </div>
 
         <div class="videos-grid" id="videosGrid"></div>
-
-        <div class="load-more-wrap" id="loadMoreWrap">
-          <button type="button" class="btn-load-more" id="loadMoreBtn">Cargar más publicaciones</button>
-        </div>
       </div>
     </section>
   </main>
 
-  <!-- ==================== MODAL DE REPRODUCCIÓN ==================== -->
+  <!-- ==================== MODAL REPRODUCTOR ==================== -->
   <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-dialog">
       <div class="modal-top">
@@ -920,7 +889,7 @@
   <!-- ==================== FIN FOOTER ÚNICO ==================== -->
 
   <script>
-    // Menú responsive
+    // Menú móvil
     const menuBtn = document.getElementById('menuBtn');
     const mainNav = document.getElementById('mainNav');
     menuBtn.addEventListener('click', () => {
@@ -928,112 +897,95 @@
       menuBtn.textContent = mainNav.classList.contains('open') ? 'Cerrar' : 'Menú';
     });
 
-    // Respaldo automático de Favicon por codificación de tilde en GitHub
+    // Respaldo automático Favicon
     const favCheck = new Image();
     favCheck.onerror = () => {
       document.getElementById('site-favicon').href = 'ABOGADO%20MANR%C3%8DQUEZ.jpg';
     };
     favCheck.src = 'ABOGADO%20MANRI%CC%81QUEZ.jpg';
 
-    /* =========================================================================
-       ARCHIVO CRONOLÓGICO COMPLETO DEL CANAL @abogadomanriquez (Del más nuevo al más antiguo)
-       Categorías:
-       - "Posesión Efectiva"
-       - "Tutoriales"
-       - "Derecho Civil y Deudas"
-       - "Derecho Laboral"
-       - "Derecho de Familia"
-       - "Constitucional y Otros"
-       ========================================================================= */
-    const VIDEOS_ARCHIVE = [
-      { id: "oSupiuQZ9nQ", title: "¿Puede Tesorería cobrar administrativamente el CAE? La batalla jurídica del momento", duration: "3:52", views: 212, viewsText: "212 vistas", dateText: "Hace 7 meses", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "WRpvmBjpvp0", title: "Crea páginas web en HTML e infografías con Gemini - AI", duration: "2:38", views: 5500, viewsText: "5,5 K vistas", dateText: "Hace 1 año", cat: "Tutoriales", tags: ["Tutoriales", "Constitucional y Otros"] },
-      { id: "1zZPJmbGp0Y", title: "Art. 150 Código Civil — Abogado explica la Renuncia de Gananciales", duration: "15:17", views: 2200, viewsText: "2,2 K vistas", dateText: "Hace 1 año", cat: "Derecho de Familia", tags: ["Derecho de Familia", "Derecho Civil y Deudas"] },
-      { id: "lBanWzzd2Nc", title: "Tutorial Formulario Herencia SII Posesión Efectiva", duration: "20:51", views: 45000, viewsText: "45 K vistas", dateText: "Hace 1 año", cat: "Posesión Efectiva", tags: ["Posesión Efectiva", "Tutoriales"] },
-      { id: "E_wXBak-9MM", title: "Nuevo Tutorial: Casos, preguntas y respuestas sobre cómo llenar formulario online de Posesión Efectiva", duration: "27:26", views: 40000, viewsText: "40 K vistas", dateText: "Hace 1 año", cat: "Posesión Efectiva", tags: ["Posesión Efectiva", "Tutoriales"] },
-      { id: "ehYaD9uKXYw", title: "Abogado Manríquez en TVN: ¿Se pueden tener mascotas en departamentos?", duration: "10:18", views: 846, viewsText: "846 vistas", dateText: "Hace 1 año", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "scvGrCzGQbI", title: "Explicación completa: cómo llenar formulario online de Posesión Efectiva (Inmuebles, dineros y autos)", duration: "21:21", views: 80000, viewsText: "80 K vistas", dateText: "Hace 3 años", cat: "Posesión Efectiva", tags: ["Posesión Efectiva", "Tutoriales"] },
-      { id: "", title: "Abogado explica con peras y manzanas la Ley «Devuélveme mi Casa»", duration: "6:45", views: 2300, viewsText: "2,3 K vistas", dateText: "Hace 3 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "", title: "Diferencias entre Ley de Término de Contrato y Ley «Devuélveme mi Casa»", duration: "6:57", views: 2000, viewsText: "2 K vistas", dateText: "Hace 3 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "", title: "Aprende a revisar tus causas con Clave Única explicado por Abogado", duration: "5:42", views: 34000, viewsText: "34 K vistas", dateText: "Hace 3 años", cat: "Tutoriales", tags: ["Tutoriales", "Derecho Civil y Deudas"] },
-      { id: "", title: "¿Problemas jurídicos de la Justicia de Pueblos y Naciones Indígenas? Análisis jurídico", duration: "9:04", views: 3900, viewsText: "3,9 K vistas", dateText: "Hace 4 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Apruebo o Rechazo: Conceptos a tener en cuenta para el Plebiscito del 4 de septiembre", duration: "9:47", views: 52000, viewsText: "52 K vistas", dateText: "Hace 4 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "cQw558sdKnE", title: "Cómo hacer solicitud de Posesión Efectiva Online en Registro Civil", duration: "17:17", views: 188000, viewsText: "188 K vistas", dateText: "Hace 4 años", cat: "Posesión Efectiva", tags: ["Posesión Efectiva", "Tutoriales"] },
-      { id: "", title: "Abogado explica Autodespido y sus causales con peras y manzanas", duration: "5:46", views: 14000, viewsText: "14 K vistas", dateText: "Hace 4 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "", title: "Abogado explica Teletrabajo en Canal TVR", duration: "6:06", views: 203, viewsText: "203 vistas", dateText: "Hace 4 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "", title: "¿Qué es una Constitución? Un resumen como introducción constitucional", duration: "5:06", views: 566, viewsText: "566 vistas", dateText: "Hace 4 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Abogado explica Cese de Pensión de Alimentos", duration: "4:27", views: 9500, viewsText: "9,5 K vistas", dateText: "Hace 4 años", cat: "Derecho de Familia", tags: ["Derecho de Familia"] },
-      { id: "", title: "Abogado explica qué es la Tercería en un juicio", duration: "2:50", views: 20000, viewsText: "20 K vistas", dateText: "Hace 5 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "", title: "Abogado explica Nueva Ley de Alcoholes en Matinal de Canal TVR", duration: "4:04", views: 719, viewsText: "719 vistas", dateText: "Hace 5 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Embargo de bienes y ¿qué cosas no se pueden embargar? — Abogado explica", duration: "4:00", views: 12000, viewsText: "12 K vistas", dateText: "Hace 5 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "", title: "Ley de Cambio de Apellidos explicada por Abogado", duration: "6:59", views: 11000, viewsText: "11 K vistas", dateText: "Hace 5 años", cat: "Derecho de Familia", tags: ["Derecho de Familia"] },
-      { id: "", title: "La cumbia del abogado en cuarentena", duration: "2:07", views: 816, viewsText: "816 vistas", dateText: "Hace 5 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Tutorial: Cómo dejar constancia laboral en línea en Dirección del Trabajo", duration: "2:48", views: 24000, viewsText: "24 K vistas", dateText: "Hace 5 años", cat: "Tutoriales", tags: ["Tutoriales", "Derecho Laboral"] },
-      { id: "", title: "Cómo solicitar retención del Tercer Retiro del 10% en Pensión de Alimentos", duration: "3:52", views: 1800, viewsText: "1,8 K vistas", dateText: "Hace 5 años", cat: "Derecho de Familia", tags: ["Derecho de Familia", "Tutoriales"] },
-      { id: "", title: "¿Despido? Abogado explica los derechos al momento de ser despedido en Chile", duration: "3:25", views: 4000, viewsText: "4 K vistas", dateText: "Hace 5 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "", title: "Abogado explica qué hacer ante despido injustificado por necesidades de la empresa y la demanda", duration: "4:33", views: 11000, viewsText: "11 K vistas", dateText: "Hace 5 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "Z17tHbi00SQ", title: "Cómo presentar escrito a través de Oficina Judicial Virtual — Tutorial", duration: "5:46", views: 151000, viewsText: "151 K vistas", dateText: "Hace 5 años", cat: "Tutoriales", tags: ["Tutoriales", "Derecho Civil y Deudas"] },
-      { id: "", title: "Despido Injustificado — Conversando en TCNX Canal TVR", duration: "20:56", views: 1300, viewsText: "1,3 K vistas", dateText: "Hace 5 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "", title: "Truman Show: Un enfoque legal — Análisis jurídico", duration: "9:31", views: 1100, viewsText: "1,1 K vistas", dateText: "Hace 5 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "El Circo de las Montini: Un enfoque legal — Abogado Manríquez", duration: "14:24", views: 2100, viewsText: "2,1 K vistas", dateText: "Hace 5 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Pensiones de Alimentos y Retención del 10% en Canal TVR Santiago", duration: "21:39", views: 1000, viewsText: "1 K vistas", dateText: "Hace 5 años", cat: "Derecho de Familia", tags: ["Derecho de Familia"] },
-      { id: "", title: "Cómo solicitar retención del Segundo Retiro del 10% en Pensión de Alimentos", duration: "6:21", views: 7500, viewsText: "7,5 K vistas", dateText: "Hace 5 años", cat: "Derecho de Familia", tags: ["Derecho de Familia", "Tutoriales"] },
-      { id: "", title: "Aclaraciones sobre Retención de Alimentos en Segundo Retiro 10% AFP", duration: "5:29", views: 3600, viewsText: "3,6 K vistas", dateText: "Hace 5 años", cat: "Derecho de Familia", tags: ["Derecho de Familia"] },
-      { id: "", title: "Abogado explica qué hacer ante Ruidos Molestos en Condominios", duration: "6:41", views: 13000, viewsText: "13 K vistas", dateText: "Hace 6 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "", title: "Todo sobre la Convención Constitucional y la Nueva Constitución", duration: "13:36", views: 2700, viewsText: "2,7 K vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Abogado explica cumplimiento de visitas — Relación Directa y Regular", duration: "5:39", views: 3500, viewsText: "3,5 K vistas", dateText: "Hace 6 años", cat: "Derecho de Familia", tags: ["Derecho de Familia"] },
-      { id: "", title: "Ley «Chao Dicom» explicada con peras y manzanas", duration: "5:36", views: 3600, viewsText: "3,6 K vistas", dateText: "Hace 6 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "", title: "¿Qué es la Formalización? — Abogado explica", duration: "3:43", views: 3100, viewsText: "3,1 K vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "¿Se puede retomar la pena de muerte en Chile? ¿Vale la pena? — Abogado explica", duration: "10:05", views: 21000, viewsText: "21 K vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Cómo retener Bono $500 mil para Pensión de Alimentos sin abogado", duration: "9:18", views: 955, viewsText: "955 vistas", dateText: "Hace 6 años", cat: "Derecho de Familia", tags: ["Derecho de Familia", "Tutoriales"] },
-      { id: "", title: "¿Cómo solicitar retención del 10% en Pensión de Alimentos? — Abogado explica", duration: "8:46", views: 23000, viewsText: "23 K vistas", dateText: "Hace 6 años", cat: "Derecho de Familia", tags: ["Derecho de Familia", "Tutoriales"] },
-      { id: "", title: "Jueces responden: Corbata y formalidad en abogados y abogadas, ¿es obligatorio?", duration: "10:56", views: 3500, viewsText: "3,5 K vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Abogado explica de forma fácil la Quiebra Personal — Preguntas y respuestas", duration: "8:33", views: 16000, viewsText: "16 K vistas", dateText: "Hace 6 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "", title: "Abogado explica Derechos de los Animales en Chile", duration: "8:10", views: 5300, viewsText: "5,3 K vistas", dateText: "Hace 6 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas", "Constitucional y Otros"] },
-      { id: "", title: "Abogado explica Sentencia Caso Attilio (Dos Madres) de forma sencilla", duration: "8:32", views: 2300, viewsText: "2,3 K vistas", dateText: "Hace 6 años", cat: "Derecho de Familia", tags: ["Derecho de Familia"] },
-      { id: "", title: "Análisis jurídico del Caso Delight Lab — Torre Telefónica, sobre la legalidad de las proyecciones", duration: "15:14", views: 991, viewsText: "991 vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Abogado explica formas legales de defenderse de las deudas", duration: "6:33", views: 4100, viewsText: "4,1 K vistas", dateText: "Hace 6 años", cat: "Derecho Civil y Deudas", tags: ["Derecho Civil y Deudas"] },
-      { id: "", title: "Abogado explica multas por no usar mascarilla", duration: "7:31", views: 5200, viewsText: "5,2 K vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "¿Qué son las alzas de precios de Isapres y por qué son inconstitucionales?", duration: "3:12", views: 499, viewsText: "499 vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Abogado explica cómo evitar alza de precios de Isapre", duration: "3:20", views: 2200, viewsText: "2,2 K vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "Diferencias entre la Constitución y la Ley", duration: "4:39", views: 14000, viewsText: "14 K vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "5 faltas del Código Penal que no conocías", duration: "4:08", views: 484, viewsText: "484 vistas", dateText: "Hace 6 años", cat: "Constitucional y Otros", tags: ["Constitucional y Otros"] },
-      { id: "", title: "¿Me pueden despedir durante la cuarentena? — Abogado explica despidos", duration: "2:55", views: 898, viewsText: "898 vistas", dateText: "Hace 6 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "", title: "Ley de Teletrabajo y Trabajo a Distancia — Abogado explica cómo funciona", duration: "7:47", views: 6300, viewsText: "6,3 K vistas", dateText: "Hace 6 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "", title: "¿Me pueden obligar a tomar vacaciones? — Abogado explica", duration: "3:05", views: 17000, viewsText: "17 K vistas", dateText: "Hace 6 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "", title: "Coronavirus y Derecho de los Trabajadores — Explicado por Abogado", duration: "6:53", views: 927, viewsText: "927 vistas", dateText: "Hace 6 años", cat: "Derecho Laboral", tags: ["Derecho Laboral"] },
-      { id: "", title: "Pensión de Alimentos: Lo que necesitas saber — Guía básica", duration: "13:33", views: 3000, viewsText: "3 K vistas", dateText: "Hace 6 años", cat: "Derecho de Familia", tags: ["Derecho de Familia"] },
-      { id: "", title: "Abogado explica el Divorcio con peras y manzanas", duration: "10:29", views: 7000, viewsText: "7 K vistas", dateText: "Hace 6 años", cat: "Derecho de Familia", tags: ["Derecho de Familia"] }
-    ].map((item, idx) => ({ ...item, cronIndex: idx }));
+    // Extrae el ID de 11 caracteres desde cualquier URL de YouTube (watch?v=, youtu.be/, shorts/)
+    function extractYouTubeId(url) {
+      if (!url) return "";
+      const regExp = /(?:youtube\.com\/(?:watch\?.*v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+      const match = url.match(regExp);
+      return match ? match[1] : "";
+    }
 
-    const CATEGORIES = [
-      "Todos",
-      "Posesión Efectiva",
-      "Tutoriales",
-      "Derecho Civil y Deudas",
-      "Derecho Laboral",
-      "Derecho de Familia",
-      "Constitucional y Otros"
-    ];
+    // Convierte "188 K vistas" o "5,5 K vistas" a número para ordenar por popularidad
+    function parseViewsCount(str) {
+      if (!str) return 0;
+      const clean = str.toUpperCase().replace(',', '.');
+      const num = parseFloat(clean.replace(/[^\d.]/g, '')) || 0;
+      if (clean.includes('M')) return num * 1000000;
+      if (clean.includes('K') || clean.includes('MIL')) return num * 1000;
+      return num;
+    }
 
+    let VIDEOS_LIST = [];
+    let ALL_CATEGORIES = ["Todos"];
     let activeCategory = "Todos";
     let searchQuery = "";
     let sortMode = "recent";
-    let visibleLimit = 15;
 
     const categoryPillsEl = document.getElementById('categoryPills');
     const videosGridEl = document.getElementById('videosGrid');
     const resultsCounterEl = document.getElementById('resultsCounter');
-    const loadMoreWrapEl = document.getElementById('loadMoreWrap');
-    const loadMoreBtnEl = document.getElementById('loadMoreBtn');
+
+    // Lee automáticamente el archivo oculto repertorio-videos.html
+    async function loadRepertorio() {
+      try {
+        const res = await fetch('repertorio-videos.html?v=' + Date.now());
+        if (!res.ok) throw new Error('No se pudo leer repertorio-videos.html');
+        const htmlText = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlText, 'text/html');
+        const items = [...doc.querySelectorAll('#lista-repertorio li')];
+
+        const catSet = new Set();
+
+        VIDEOS_LIST = items.map((li, index) => {
+          const rawUrl = (li.getAttribute('data-url') || '').trim();
+          const videoId = extractYouTubeId(rawUrl);
+          const rawCats = (li.getAttribute('data-categoria') || 'General')
+            .split(',')
+            .map(c => c.trim())
+            .filter(Boolean);
+
+          rawCats.forEach(c => catSet.add(c));
+
+          const viewsText = (li.getAttribute('data-vistas') || '').trim();
+
+          return {
+            cronIndex: index,
+            url: rawUrl || (videoId ? `https://www.youtube.com/watch?v=${videoId}` : ''),
+            id: videoId,
+            title: li.textContent.trim(),
+            categories: rawCats,
+            primaryCat: rawCats[0] || 'General',
+            duration: (li.getAttribute('data-duracion') || '').trim(),
+            viewsText: viewsText,
+            viewsNum: parseViewsCount(viewsText),
+            dateText: (li.getAttribute('data-fecha') || '').trim()
+          };
+        }).filter(v => v.title);
+
+        ALL_CATEGORIES = ["Todos", ...Array.from(catSet)];
+        renderCategoryPills();
+        renderVideos();
+      } catch (err) {
+        resultsCounterEl.textContent = "No se encontró repertorio-videos.html en la misma carpeta.";
+        videosGridEl.innerHTML = `<p style="grid-column:1/-1;color:var(--ink-secondary);">Asegúrese de subir <strong>repertorio-videos.html</strong> en la misma carpeta raíz de GitHub junto a <strong>videos-publicados.html</strong>.</p>`;
+      }
+    }
 
     function renderCategoryPills() {
-      categoryPillsEl.innerHTML = CATEGORIES.map(cat => {
+      categoryPillsEl.innerHTML = ALL_CATEGORIES.map(cat => {
         const count = cat === "Todos"
-          ? VIDEOS_ARCHIVE.length
-          : VIDEOS_ARCHIVE.filter(v => v.tags.includes(cat)).length;
-        const isActive = cat === activeCategory ? "active" : "";
-        return `<button type="button" class="filter-btn ${isActive}" data-cat="${cat}">
+          ? VIDEOS_LIST.length
+          : VIDEOS_LIST.filter(v => v.categories.includes(cat)).length;
+        const activeClass = cat === activeCategory ? "active" : "";
+        return `<button type="button" class="filter-btn ${activeClass}" data-cat="${cat}">
           ${cat}<span class="count-num">(${count})</span>
         </button>`;
       }).join('');
@@ -1041,76 +993,63 @@
       categoryPillsEl.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           activeCategory = btn.getAttribute('data-cat');
-          visibleLimit = 15;
           renderCategoryPills();
-          renderCatalog();
+          renderVideos();
         });
       });
     }
 
-    function normalizeStr(str) {
-      return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    function normalizeStr(s) {
+      return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
 
-    function getFilteredVideos() {
+    function renderVideos() {
       const q = normalizeStr(searchQuery.trim());
-      let list = VIDEOS_ARCHIVE.filter(v => {
-        const matchCat = activeCategory === "Todos" || v.tags.includes(activeCategory);
-        const matchQuery = !q || normalizeStr(v.title + " " + v.cat).includes(q);
-        return matchCat && matchQuery;
+
+      let filtered = VIDEOS_LIST.filter(v => {
+        const matchCat = activeCategory === "Todos" || v.categories.includes(activeCategory);
+        const matchText = !q || normalizeStr(v.title + " " + v.categories.join(" ")).includes(q);
+        return matchCat && matchText;
       });
 
       if (sortMode === "popular") {
-        list.sort((a, b) => b.views - a.views);
+        filtered.sort((a, b) => b.viewsNum - a.viewsNum);
       } else if (sortMode === "oldest") {
-        list.sort((a, b) => b.cronIndex - a.cronIndex);
+        filtered.sort((a, b) => b.cronIndex - a.cronIndex);
       } else {
-        list.sort((a, b) => a.cronIndex - b.cronIndex);
+        filtered.sort((a, b) => a.cronIndex - b.cronIndex);
       }
-      return list;
-    }
 
-    function renderCatalog() {
-      const filtered = getFilteredVideos();
-      const slice = filtered.slice(0, visibleLimit);
-
-      resultsCounterEl.textContent = `Mostrando ${slice.length} de ${filtered.length} publicaciones`;
+      resultsCounterEl.textContent = `Mostrando ${filtered.length} de ${VIDEOS_LIST.length} videos publicados`;
 
       if (filtered.length === 0) {
-        videosGridEl.innerHTML = `<p style="grid-column:1/-1;padding:36px 0;color:var(--ink-muted);">No se encontraron publicaciones para esa búsqueda. Pruebe con otro término o seleccione «Todos».</p>`;
-        loadMoreWrapEl.style.display = "none";
+        videosGridEl.innerHTML = `<p style="grid-column:1/-1;padding:30px 0;color:var(--ink-muted);">No hay videos que coincidan con ese filtro.</p>`;
         return;
       }
 
-      videosGridEl.innerHTML = slice.map(v => {
-        const hasDirectId = Boolean(v.id);
-        const coverHtml = hasDirectId
-          ? `<img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt="${v.title.replace(/"/g, '&quot;')}" loading="lazy" />`
-          : `<div class="editorial-cover">
-               <div class="editorial-cover-top">
-                 <span>Abogado Manríquez</span>
-                 <span>YouTube</span>
-               </div>
-               <div class="editorial-cover-title">${v.title}</div>
-             </div>`;
-
-        const actionLabel = hasDirectId ? "Reproducir aquí ▶" : "Ver en YouTube ↗";
+      videosGridEl.innerHTML = filtered.map(v => {
+        const safeTitle = v.title.replace(/"/g, '&quot;');
+        const thumbUrl = v.id ? `https://img.youtube.com/vi/${v.id}/hqdefault.jpg` : `ABOGADO%20MANRI%CC%81QUEZ.jpg`;
+        const metaInfo = [v.dateText, v.viewsText].filter(Boolean).join(' · ');
 
         return `
-          <article class="video-item" data-id="${v.id}" data-title="${v.title.replace(/"/g, '&quot;')}">
+          <article class="video-item">
             <div>
-              <div class="video-cover">
-                ${coverHtml}
-                <span class="duration-tag">${v.duration}</span>
+              <div class="video-cover" data-play-id="${v.id}" data-play-url="${v.url}" data-play-title="${safeTitle}">
+                <img src="${thumbUrl}" alt="${safeTitle}" loading="lazy" />
+                ${v.duration ? `<span class="duration-tag">${v.duration}</span>` : ''}
               </div>
               <div class="video-info">
                 <div>
-                  <span class="video-cat">${v.cat}</span>
-                  <h3>${v.title}</h3>
+                  <span class="video-cat">${v.categories.join(' · ')}</span>
+                  <h3 data-play-id="${v.id}" data-play-url="${v.url}" data-play-title="${safeTitle}">${v.title}</h3>
                 </div>
                 <div class="video-meta-row">
-                  <span>${v.dateText} · ${v.viewsText}</span>
-                  <span class="watch-cta">${actionLabel}</span>
+                  <span>${metaInfo}</span>
+                  <div class="video-actions-inline">
+                    <button type="button" class="btn-play-here" data-play-id="${v.id}" data-play-url="${v.url}" data-play-title="${safeTitle}">Reproducir ▶</button>
+                    ${v.url ? `<a href="${v.url}" target="_blank" rel="noopener" class="link-yt-direct">YouTube ↗</a>` : ''}
+                  </div>
                 </div>
               </div>
             </div>
@@ -1118,39 +1057,28 @@
         `;
       }).join('');
 
-      loadMoreWrapEl.style.display = slice.length < filtered.length ? "block" : "none";
-      loadMoreBtnEl.textContent = `Cargar más publicaciones (${filtered.length - slice.length} restantes)`;
-
-      // Eventos de clic en cada tarjeta
-      videosGridEl.querySelectorAll('.video-item').forEach(card => {
-        card.addEventListener('click', () => {
-          const vid = card.getAttribute('data-id');
-          const title = card.getAttribute('data-title');
+      videosGridEl.querySelectorAll('[data-play-id]').forEach(el => {
+        el.addEventListener('click', () => {
+          const vid = el.getAttribute('data-play-id');
+          const url = el.getAttribute('data-play-url');
+          const title = el.getAttribute('data-play-title');
           if (vid) {
             openVideoModal(vid, title);
-          } else {
-            const ytChannelSearch = `https://www.youtube.com/@abogadomanriquez/search?query=${encodeURIComponent(title)}`;
-            window.open(ytChannelSearch, '_blank', 'noopener');
+          } else if (url) {
+            window.open(url, '_blank', 'noopener');
           }
         });
       });
     }
 
-    // Buscador, Orden y Cargar Más
     document.getElementById('videoSearch').addEventListener('input', (e) => {
       searchQuery = e.target.value;
-      visibleLimit = 15;
-      renderCatalog();
+      renderVideos();
     });
 
     document.getElementById('videoSort').addEventListener('change', (e) => {
       sortMode = e.target.value;
-      renderCatalog();
-    });
-
-    loadMoreBtnEl.addEventListener('click', () => {
-      visibleLimit += 18;
-      renderCatalog();
+      renderVideos();
     });
 
     // Modal Reproductor
@@ -1177,9 +1105,7 @@
       if (e.key === 'Escape' && modal.classList.contains('open')) closeVideoModal();
     });
 
-    // Inicializar vista
-    renderCategoryPills();
-    renderCatalog();
+    loadRepertorio();
   </script>
 </body>
 </html>
