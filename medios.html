@@ -1,1 +1,1214 @@
-Página en construcción
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apariciones en Medios y Prensa — Abogado Manríquez</title>
+  <meta name="description" content="Archivo cronológico de apariciones en televisión (TVN, Canal TVR), prensa escrita (Diario Financiero, BioBioChile, El Mostrador), casos judiciales destacados en Diario Constitucional y conferencias de Daniel Manríquez Sansigolo." />
+
+  <!-- Favicon -->
+  <link id="site-favicon" rel="icon" type="image/jpeg" href="ABOGADO%20MANRI%CC%81QUEZ.jpg" />
+
+  <!-- Tipografía Editorial & Corporativa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy-950: #0b1622;
+      --navy-900: #102132;
+      --navy-800: #1a324a;
+      --paper: #f7f6f2;
+      --paper-alt: #efede6;
+      --surface: #ffffff;
+      --ink: #141c24;
+      --ink-secondary: #4a5764;
+      --ink-muted: #768390;
+      --accent: #9a7b4f;
+      --line: #dcd8ce;
+      --line-dark: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       HEADER ÚNICO (CON CORRECCIÓN MÓVIL INCLUIDA)
+       ========================================================= */
+    .site-header {
+      background-color: var(--navy-950);
+      color: #ffffff;
+      border-bottom: 1px solid var(--line-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 82px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .brand-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      color: #ffffff;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: #9fb0c2;
+      margin-top: 3px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .main-nav a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #cbd5e1;
+      padding: 6px 0;
+      position: relative;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: #ffffff;
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a.active::after {
+      width: 100%;
+    }
+
+    .main-nav a.nav-highlight {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 8px 15px;
+      color: #ffffff;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .main-nav a.nav-highlight::after {
+      display: none;
+    }
+
+    .main-nav a.nav-highlight:hover {
+      background-color: #ffffff;
+      color: var(--navy-950);
+      border-color: #ffffff;
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+      padding: 8px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       ENCABEZADO DE PRENSA Y MEDIOS
+       ========================================================= */
+    .media-hero {
+      background-color: var(--navy-900);
+      color: #ffffff;
+      padding: 76px 0 82px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .media-hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 48px;
+      align-items: end;
+    }
+
+    .section-kicker {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #c5a678;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .media-hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.45rem, 4.4vw, 3.75rem);
+      font-weight: 600;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .rule-gold {
+      width: 56px;
+      height: 1px;
+      background-color: var(--accent);
+      margin-bottom: 22px;
+    }
+
+    .media-hero p {
+      font-size: 1.02rem;
+      color: #cbd7e3;
+      max-width: 650px;
+      line-height: 1.8;
+    }
+
+    .press-contact-box {
+      background-color: var(--navy-950);
+      border: 1px solid var(--line-dark);
+      padding: 26px 28px;
+    }
+
+    .press-contact-box strong {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: #ffffff;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .press-contact-box p {
+      font-size: 0.82rem;
+      color: #9fb0c2;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .btn-press-contact {
+      display: inline-block;
+      padding: 9px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-press-contact:hover {
+      background-color: #ffffff;
+      color: var(--navy-950);
+    }
+
+    /* Cinta de medios destacados */
+    .outlets-strip {
+      background-color: var(--navy-950);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+      color: #8fa3b8;
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .outlets-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .outlets-names {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      color: #d6e0ea;
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       CONTROLES DE FILTRADO Y ORDENAMIENTO
+       ========================================================= */
+    .media-controls {
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--line);
+      padding: 28px 0;
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      background-color: var(--paper);
+      border: 1px solid var(--line);
+      color: var(--ink-secondary);
+      padding: 9px 16px;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--navy-800);
+      color: var(--navy-950);
+    }
+
+    .filter-btn.active {
+      background-color: var(--navy-900);
+      border-color: var(--navy-900);
+      color: #ffffff;
+    }
+
+    .filter-btn .count-num {
+      opacity: 0.7;
+      font-size: 0.74rem;
+      margin-left: 5px;
+      font-weight: 400;
+    }
+
+    .search-sort-bar {
+      display: grid;
+      grid-template-columns: 1fr 270px;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .search-sort-bar input,
+    .search-sort-bar select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      background-color: var(--paper);
+      font-family: inherit;
+      font-size: 0.88rem;
+      color: var(--ink);
+    }
+
+    .search-sort-bar input:focus,
+    .search-sort-bar select:focus {
+      outline: none;
+      border-color: var(--navy-800);
+      background-color: #ffffff;
+    }
+
+    /* =========================================================
+       LISTADO CRONOLÓGICO EDITORIAL DE APARICIONES
+       ========================================================= */
+    .media-archive-section {
+      padding: 56px 0 96px;
+      flex: 1;
+    }
+
+    .results-status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+      margin-bottom: 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .press-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .press-entry {
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 190px 1fr 230px;
+      gap: 32px;
+      align-items: center;
+      transition: border-color 0.25s ease;
+    }
+
+    .press-entry.no-thumb {
+      grid-template-columns: 190px 1fr auto;
+    }
+
+    .press-entry:hover {
+      border-color: var(--navy-800);
+    }
+
+    .press-entry.judicial-highlight {
+      border-left: 3px solid var(--accent);
+    }
+
+    /* Columna izquierda: Fecha + Medio + Categoría */
+    .press-meta-col {
+      align-self: start;
+      border-right: 1px solid #ece9e1;
+      padding-right: 20px;
+      height: 100%;
+    }
+
+    .press-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .press-outlet {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--navy-950);
+      line-height: 1.2;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .press-cats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .cat-tag {
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-weight: 600;
+      color: var(--accent);
+      background-color: var(--paper);
+      border: 1px solid var(--line);
+      padding: 2px 7px;
+    }
+
+    /* Columna central: Título, Rol y Resumen */
+    .press-body-col {
+      min-width: 0;
+    }
+
+    .press-role {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--navy-800);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .press-body-col h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.58rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--navy-950);
+      margin-bottom: 10px;
+    }
+
+    .press-body-col p {
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .press-action-link {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-900);
+      border-bottom: 1px solid var(--navy-900);
+      padding-bottom: 2px;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font-family: inherit;
+      cursor: pointer;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .press-action-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Columna derecha: Miniatura de Video (si aplica) o Botón de Lectura */
+    .press-thumb-box {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background-color: var(--navy-950);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .press-thumb-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .press-thumb-box:hover img {
+      transform: scale(1.04);
+    }
+
+    .thumb-play-label {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background-color: rgba(11, 22, 34, 0.88);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 8px;
+    }
+
+    .btn-read-article {
+      display: inline-block;
+      padding: 11px 18px;
+      border: 1px solid var(--navy-900);
+      color: var(--navy-900);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      white-space: nowrap;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-read-article:hover {
+      background-color: var(--navy-900);
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       MODAL REPRODUCTOR PARA APARICIONES DE TV / WEBINARS
+       ========================================================= */
+    .video-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background-color: rgba(11, 22, 34, 0.88);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .video-modal.open {
+      display: flex;
+    }
+
+    .modal-dialog {
+      background-color: var(--surface);
+      width: 100%;
+      max-width: 880px;
+      border: 1px solid var(--line);
+    }
+
+    .modal-top {
+      padding: 16px 22px;
+      background-color: var(--navy-950);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .modal-top h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .modal-close {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      padding: 6px 12px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .modal-player {
+      aspect-ratio: 16 / 9;
+      background-color: #000;
+    }
+
+    .modal-player iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .modal-bottom {
+      padding: 16px 22px;
+      background-color: var(--paper);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.85rem;
+      color: var(--ink-secondary);
+    }
+
+    .modal-bottom-links {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .modal-bottom a.btn-modal-cta {
+      font-size: 0.76rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 9px 16px;
+      background-color: var(--navy-900);
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       FOOTER ÚNICO
+       ========================================================= */
+    .site-footer {
+      background-color: var(--navy-950);
+      color: #9fb0c2;
+      border-top: 1px solid var(--line-dark);
+      padding: 64px 0 36px;
+      font-size: 0.86rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .footer-brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .footer-list {
+      list-style: none;
+    }
+
+    .footer-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer-list a {
+      color: #9fb0c2;
+      transition: color 0.2s ease;
+    }
+
+    .footer-list a:hover {
+      color: #ffffff;
+    }
+
+    .footer-meta {
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: #6e8296;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+    @media (max-width: 1040px) {
+      .header-inner { gap: 10px !important; }
+      .brand { flex: 1 !important; min-width: 0 !important; flex-shrink: 1 !important; }
+      .brand-avatar { flex-shrink: 0 !important; }
+      .brand-titles { min-width: 0 !important; }
+      .brand-sub { white-space: normal !important; line-height: 1.2 !important; font-size: 0.65rem !important; }
+      .menu-btn { display: inline-block !important; flex-shrink: 0 !important; }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background-color: var(--navy-950);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 5%;
+        gap: 16px;
+        border-bottom: 1px solid var(--line-dark);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .press-entry,
+      .press-entry.no-thumb {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .press-meta-col {
+        border-right: none;
+        border-bottom: 1px solid #ece9e1;
+        padding-right: 0;
+        padding-bottom: 14px;
+      }
+
+      .press-thumb-box {
+        max-width: 340px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .media-hero-grid,
+      .search-sort-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .press-entry {
+        padding: 22px 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ÚNICO ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img
+          src="ABOGADO%20MANRI%CC%81QUEZ.jpg"
+          onerror="this.onerror=null;this.src='ABOGADO%20MANR%C3%8DQUEZ.jpg';"
+          alt="Abogado Manríquez"
+          class="brand-avatar"
+        />
+        <div class="brand-titles">
+          <span class="brand-name">Abogado Manríquez</span>
+          <span class="brand-sub"><em>Daniel Manríquez Sansigolo</em> · el <em>«Abogado Manríquez»</em></span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Menú">Menú</button>
+
+      <ul class="main-nav" id="mainNav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-el-abogado.html">Sobre el Abogado</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medios.html" class="active">Medios</a></li>
+        <li><a href="videos-publicados.html">Videos Publicados</a></li>
+        <li><a href="canales-de-contacto.html">Canales de Contacto</a></li>
+        <li><a href="agendar-consulta.html" class="nav-highlight">Agendar Consulta</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- ==================== FIN HEADER ÚNICO ==================== -->
+
+  <main>
+    <!-- ==================== ENCABEZADO ==================== -->
+    <section class="media-hero">
+      <div class="container media-hero-grid">
+        <div>
+          <span class="section-kicker">Sala de Prensa y Jurisprudencia</span>
+          <h1>Apariciones en medios, prensa escrita y fallos destacados.</h1>
+          <div class="rule-gold"></div>
+          <p>
+            Registro cronológico de intervenciones televisivas, entrevistas en diarios nacionales, sentencias relevantes obtenidas ante Tribunales Superiores de Justicia y ponencias académicas.
+          </p>
+        </div>
+
+        <aside class="press-contact-box">
+          <strong>Contacto de Prensa</strong>
+          <p>Para cuñas jurídicas, entrevistas en televisión, radio o prensa escrita sobre contingencia legal:</p>
+          <a href="canales-de-contacto.html" class="btn-press-contact">Solicitar entrevista →</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Cinta institucional de medios -->
+    <div class="outlets-strip">
+      <div class="container outlets-inner">
+        <span>Destacado en:</span>
+        <div class="outlets-names">
+          <span>TVN</span>
+          <span>Diario Financiero</span>
+          <span>BioBioChile</span>
+          <span>Diario Constitucional</span>
+          <span>El Mostrador</span>
+          <span>Canal TVR</span>
+          <span>U. Alberto Hurtado</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== FILTROS Y ORDEN ==================== -->
+    <section class="media-controls" aria-label="Filtros de apariciones en medios">
+      <div class="container">
+        <div class="filter-pills" id="mediaCategoryPills"></div>
+
+        <div class="search-sort-bar">
+          <input
+            type="search"
+            id="mediaSearch"
+            placeholder="Buscar por medio, tribunal o materia (ej. Diario Constitucional, TVN, BioBioChile, datos, despido)..."
+            aria-label="Buscar en medios"
+          />
+
+          <select id="mediaSort" aria-label="Orden cronológico">
+            <option value="newest">Orden: Más recientes primero</option>
+            <option value="oldest">Orden: Más antiguos primero</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LISTADO CRONOLÓGICO ==================== -->
+    <section class="media-archive-section">
+      <div class="container">
+        <div class="results-status">
+          <span id="mediaCounter">Cargando archivo de prensa y medios...</span>
+          <span>¿Desea evaluar su caso directamente con el abogado? <a href="agendar-consulta.html" style="color:var(--navy-900);font-weight:600;text-decoration:underline;">Agendar consulta ($45.000)</a></span>
+        </div>
+
+        <div class="press-stack" id="pressStack"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== MODAL REPRODUCTOR ==================== -->
+  <div class="video-modal" id="mediaVideoModal" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-top">
+        <h4 id="mediaModalTitle">Reproduciendo entrevista</h4>
+        <button type="button" class="modal-close" id="mediaModalClose">Cerrar ✕</button>
+      </div>
+      <div class="modal-player" id="mediaModalPlayer"></div>
+      <div class="modal-bottom">
+        <span>Archivo de televisión y conferencias · Abogado Daniel Manríquez</span>
+        <div class="modal-bottom-links">
+          <a href="#" id="mediaModalExtLink" target="_blank" rel="noopener" style="font-size:0.8rem;text-decoration:underline;color:var(--navy-900);">Abrir en YouTube ↗</a>
+          <a href="agendar-consulta.html" class="btn-modal-cta">Agendar Consulta</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ÚNICO ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-title">Abogado Manríquez</div>
+          <p style="line-height:1.7;margin-bottom:12px;">
+            Daniel Manríquez Sansigolo.<br />
+            Ejercicio privado y consultoría legal en Santiago de Chile.
+          </p>
+          <p style="font-size:0.8rem;color:#7d91a6;">
+            Huérfanos 757, oficina 614, Santiago.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Secciones</h4>
+          <ul class="footer-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-el-abogado.html">Sobre el Abogado</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="medios.html">Medios</a></li>
+            <li><a href="videos-publicados.html">Videos Publicados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atención y Firmas</h4>
+          <ul class="footer-list">
+            <li><a href="agendar-consulta.html">Agendar Consulta</a></li>
+            <li><a href="canales-de-contacto.html">Canales de Contacto</a></li>
+            <li><a href="https://legaldatos.cl" target="_blank" rel="noopener">LegalDatos.cl</a></li>
+            <li><a href="https://lextrabajador.cl" target="_blank" rel="noopener">LexTrabajador.cl</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Directo</h4>
+          <ul class="footer-list">
+            <li><a href="mailto:daniel@manriquezrivera.cl">daniel@manriquezrivera.cl</a></li>
+            <li><a href="https://wa.me/56968434272" target="_blank" rel="noopener">+56 9 6843 4272</a></li>
+            <li><a href="https://www.youtube.com/@abogadomanriquez" target="_blank" rel="noopener">YouTube · @abogadomanriquez</a></li>
+            <li><a href="https://www.instagram.com/abogadomanriquez" target="_blank" rel="noopener">Instagram · @abogadomanriquez</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <span>© 2026 Daniel Manríquez Sansigolo. Todos los derechos reservados.</span>
+        <span>Manríquez Sansigolo Abogados.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- ==================== FIN FOOTER ÚNICO ==================== -->
+
+  <script>
+    // Menú móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      menuBtn.textContent = mainNav.classList.contains('open') ? 'Cerrar' : 'Menú';
+    });
+
+    // Respaldo automático Favicon
+    const favCheck = new Image();
+    favCheck.onerror = () => {
+      document.getElementById('site-favicon').href = 'ABOGADO%20MANR%C3%8DQUEZ.jpg';
+    };
+    favCheck.src = 'ABOGADO%20MANRI%CC%81QUEZ.jpg';
+
+    function extractYouTubeId(url) {
+      if (!url) return "";
+      const regExp = /(?:youtube\.com\/(?:watch\?.*v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+      const match = url.match(regExp);
+      return match ? match[1] : "";
+    }
+
+    const CATEGORY_ORDER = [
+      "Todos",
+      "Prensa Escrita",
+      "Casos Judiciales",
+      "Entrevistas",
+      "TV"
+    ];
+
+    let MEDIA_ITEMS = [];
+    let ALL_CATS = ["Todos"];
+    let activeCat = "Todos";
+    let searchQuery = "";
+    let sortMode = "newest";
+
+    const pillsEl = document.getElementById('mediaCategoryPills');
+    const stackEl = document.getElementById('pressStack');
+    const counterEl = document.getElementById('mediaCounter');
+
+    async function loadRepertorioMedios() {
+      try {
+        const res = await fetch('repertorio-medios.html?v=' + Date.now());
+        if (!res.ok) throw new Error('No se encontró repertorio-medios.html');
+        const htmlText = await res.text();
+        const doc = new DOMParser().parseFromString(htmlText, 'text/html');
+        const nodes = [...doc.querySelectorAll('#lista-medios li')];
+
+        const foundCats = new Set();
+
+        MEDIA_ITEMS = nodes.map((li, idx) => {
+          const url = (li.getAttribute('data-url') || '').trim();
+          const ytId = extractYouTubeId(url);
+          const cats = (li.getAttribute('data-categoria') || 'Prensa Escrita')
+            .split(',')
+            .map(c => c.trim())
+            .filter(Boolean);
+
+          cats.forEach(c => foundCats.add(c));
+
+          const isoDate = (li.getAttribute('data-fecha') || '2020-01-01').trim();
+
+          return {
+            index: idx,
+            isoDate: isoDate,
+            dateText: (li.getAttribute('data-fecha-texto') || isoDate).trim(),
+            categories: cats,
+            outlet: (li.getAttribute('data-medio') || '').trim(),
+            role: (li.getAttribute('data-rol') || '').trim(),
+            url: url,
+            ytId: ytId,
+            summary: (li.getAttribute('data-resumen') || '').trim(),
+            title: li.textContent.trim()
+          };
+        }).filter(item => item.title);
+
+        const extra = [...foundCats].filter(c => !CATEGORY_ORDER.includes(c));
+        ALL_CATS = [...CATEGORY_ORDER.filter(c => c === "Todos" || foundCats.has(c)), ...extra];
+
+        renderPills();
+        renderMediaArchive();
+      } catch (err) {
+        counterEl.textContent = "Error al cargar repertorio-medios.html. Verifique que ambos archivos estén en la misma carpeta.";
+      }
+    }
+
+    function renderPills() {
+      pillsEl.innerHTML = ALL_CATS.map(cat => {
+        const count = cat === "Todos"
+          ? MEDIA_ITEMS.length
+          : MEDIA_ITEMS.filter(m => m.categories.includes(cat)).length;
+        const activeClass = cat === activeCat ? "active" : "";
+        return `<button type="button" class="filter-btn ${activeClass}" data-cat="${cat}">
+          ${cat}<span class="count-num">(${count})</span>
+        </button>`;
+      }).join('');
+
+      pillsEl.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCat = btn.getAttribute('data-cat');
+          renderPills();
+          renderMediaArchive();
+        });
+      });
+    }
+
+    function normalizeStr(s) {
+      return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function renderMediaArchive() {
+      const q = normalizeStr(searchQuery.trim());
+
+      let filtered = MEDIA_ITEMS.filter(m => {
+        const matchCat = activeCat === "Todos" || m.categories.includes(activeCat);
+        const searchable = normalizeStr(`${m.title} ${m.outlet} ${m.role} ${m.summary} ${m.categories.join(' ')}`);
+        const matchQuery = !q || searchable.includes(q);
+        return matchCat && matchQuery;
+      });
+
+      filtered.sort((a, b) => {
+        if (sortMode === "oldest") {
+          return a.isoDate.localeCompare(b.isoDate) || (b.index - a.index);
+        }
+        return b.isoDate.localeCompare(a.isoDate) || (a.index - b.index);
+      });
+
+      counterEl.textContent = `Mostrando ${filtered.length} de ${MEDIA_ITEMS.length} apariciones y publicaciones`;
+
+      if (filtered.length === 0) {
+        stackEl.innerHTML = `<p style="padding:28px 0;color:var(--ink-muted);">No se encontraron registros para ese criterio. Pruebe seleccionando «Todos».</p>`;
+        return;
+      }
+
+      stackEl.innerHTML = filtered.map(m => {
+        const safeTitle = m.title.replace(/"/g, '&quot;');
+        const isJudicial = m.categories.includes('Casos Judiciales');
+        const hasVideo = Boolean(m.ytId);
+        const isPdf = m.url.toLowerCase().endsWith('.pdf');
+
+        const tagsHtml = m.categories.map(c => `<span class="cat-tag">${c}</span>`).join('');
+
+        const rightColHtml = hasVideo
+          ? `<div class="press-thumb-box" data-yt="${m.ytId}" data-url="${m.url}" data-title="${safeTitle}">
+               <img src="https://i.ytimg.com/vi/${m.ytId}/hqdefault.jpg" alt="${safeTitle}" loading="lazy" />
+               <span class="thumb-play-label">▶ Reproducir</span>
+             </div>`
+          : `<div>
+               <a href="${m.url}" target="_blank" rel="noopener" class="btn-read-article">
+                 ${isPdf ? 'Abrir suplemento PDF ↗' : isJudicial ? 'Leer fallo publicado ↗' : 'Leer publicación ↗'}
+               </a>
+             </div>`;
+
+        const inlineActionHtml = hasVideo
+          ? `<button type="button" class="press-action-link" data-yt="${m.ytId}" data-url="${m.url}" data-title="${safeTitle}">Ver intervención en pantalla ▶</button>`
+          : `<a href="${m.url}" target="_blank" rel="noopener" class="press-action-link">${isJudicial ? 'Revisar nota jurisprudencial en Diario Constitucional ↗' : 'Ir a la fuente original ↗'}</a>`;
+
+        return `
+          <article class="press-entry ${hasVideo ? '' : 'no-thumb'} ${isJudicial ? 'judicial-highlight' : ''}">
+            <div class="press-meta-col">
+              <span class="press-date">${m.dateText}</span>
+              <span class="press-outlet">${m.outlet}</span>
+              <div class="press-cats">${tagsHtml}</div>
+            </div>
+
+            <div class="press-body-col">
+              ${m.role ? `<span class="press-role">${m.role}</span>` : ''}
+              <h3>${m.title}</h3>
+              ${m.summary ? `<p>${m.summary}</p>` : ''}
+              ${inlineActionHtml}
+            </div>
+
+            ${rightColHtml}
+          </article>
+        `;
+      }).join('');
+
+      stackEl.querySelectorAll('[data-yt]').forEach(el => {
+        el.addEventListener('click', () => {
+          openMediaModal(
+            el.getAttribute('data-yt'),
+            el.getAttribute('data-title'),
+            el.getAttribute('data-url')
+          );
+        });
+      });
+    }
+
+    document.getElementById('mediaSearch').addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderMediaArchive();
+    });
+
+    document.getElementById('mediaSort').addEventListener('change', (e) => {
+      sortMode = e.target.value;
+      renderMediaArchive();
+    });
+
+    // Modal de video
+    const modal = document.getElementById('mediaVideoModal');
+    const modalPlayer = document.getElementById('mediaModalPlayer');
+    const modalTitle = document.getElementById('mediaModalTitle');
+    const modalExtLink = document.getElementById('mediaModalExtLink');
+
+    function openMediaModal(ytId, title, rawUrl) {
+      modalTitle.textContent = title;
+      modalExtLink.href = rawUrl;
+      modalPlayer.innerHTML = `<iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0" title="${title.replace(/"/g, '&quot;')}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      modal.classList.add('open');
+    }
+
+    function closeMediaModal() {
+      modal.classList.remove('open');
+      modalPlayer.innerHTML = "";
+    }
+
+    document.getElementById('mediaModalClose').addEventListener('click', closeMediaModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeMediaModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeMediaModal();
+    });
+
+    loadRepertorioMedios();
+  </script>
+</body>
+</html>
