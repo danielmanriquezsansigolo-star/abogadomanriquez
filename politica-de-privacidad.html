@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad y Tratamiento de Datos Personales — Abogado Manríquez</title>
+  <meta name="description" content="Política de Tratamiento de Datos Personales y Privacidad de Daniel Manríquez Sansigolo (Abogado Manríquez / Manríquez Sansigolo Abogados) conforme al Artículo 14 ter de la Ley N° 19.628, reformada por la Ley N° 21.719." />
+
+  <!-- Favicon -->
+  <link id="site-favicon" rel="icon" type="image/jpeg" href="ABOGADO%20MANRI%CC%81QUEZ.jpg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Política de Privacidad y Tratamiento de Datos Personales — Abogado Manríquez" />
+  <meta property="og:description" content="Conozca qué datos personales tratamos, con qué finalidad, bajo qué base de licitud, por cuánto tiempo los conservamos y cómo ejercer sus derechos ARSOP+." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Tipografía Editorial & Corporativa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy-950: #0b1622;
+      --navy-900: #102132;
+      --navy-800: #1a324a;
+      --paper: #f7f6f2;
+      --paper-alt: #efede6;
+      --surface: #ffffff;
+      --ink: #141c24;
+      --ink-secondary: #4a5764;
+      --ink-muted: #768390;
+      --accent: #9a7b4f;
+      --line: #dcd8ce;
+      --line-light: #e8e5dc;
+      --line-dark: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.72;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       HEADER ÚNICO (CON CORRECCIÓN MÓVIL INCLUIDA)
+       ========================================================= */
+    .site-header {
+      background-color: var(--navy-950);
+      color: #ffffff;
+      border-bottom: 1px solid var(--line-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 82px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .brand-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      color: #ffffff;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: #9fb0c2;
+      margin-top: 3px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .main-nav a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #cbd5e1;
+      padding: 6px 0;
+      position: relative;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: #ffffff;
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a.active::after {
+      width: 100%;
+    }
+
+    .main-nav a.nav-highlight {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 8px 15px;
+      color: #ffffff;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .main-nav a.nav-highlight::after {
+      display: none;
+    }
+
+    .main-nav a.nav-highlight:hover {
+      background-color: #ffffff;
+      color: var(--navy-950);
+      border-color: #ffffff;
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+      padding: 8px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       1. CABECERA DE LA POLÍTICA (HERO)
+       ========================================================= */
+    .policy-hero {
+      background-color: var(--navy-900);
+      color: #ffffff;
+      padding: 68px 0 74px;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: #8fa3b8;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb a {
+      color: #cbd7e3;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: #ffffff;
+    }
+
+    .breadcrumb .sep {
+      color: #6e8296;
+    }
+
+    .policy-hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 52px;
+      align-items: end;
+    }
+
+    .policy-kicker {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #c5a678;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .policy-hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.35rem, 4.2vw, 3.55rem);
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-lead {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #cbd7e3;
+      max-width: 64ch;
+    }
+
+    /* Ficha de Control Documental */
+    .doc-control-card {
+      background-color: var(--navy-950);
+      border: 1px solid var(--line-dark);
+      border-left: 3px solid var(--accent);
+      padding: 24px 26px;
+      font-size: 0.84rem;
+    }
+
+    .doc-control-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #c5a678;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .doc-control-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .doc-control-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: #9fb0c2;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      padding-bottom: 7px;
+    }
+
+    .doc-control-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .doc-control-list li strong {
+      color: #ffffff;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    /* =========================================================
+       2. ESTRUCTURA DEL DOCUMENTO + ÍNDICE LATERAL STICKY
+       ========================================================= */
+    .policy-wrapper {
+      padding: 68px 0 96px;
+      flex: 1;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .policy-toc {
+      position: sticky;
+      top: 104px;
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--navy-950);
+      padding: 24px 22px;
+    }
+
+    .toc-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--navy-950);
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toc-list a {
+      display: block;
+      font-size: 0.81rem;
+      color: var(--ink-secondary);
+      padding: 7px 9px;
+      border-left: 2px solid transparent;
+      transition: all 0.18s ease;
+      line-height: 1.35;
+    }
+
+    .toc-list a:hover {
+      color: var(--navy-950);
+      background-color: var(--paper);
+      border-left-color: var(--accent);
+    }
+
+    .toc-contact-mini {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line-light);
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+
+    .toc-contact-mini strong {
+      color: var(--navy-950);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .toc-contact-mini a {
+      color: var(--navy-800);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* Hoja Principal del Documento */
+    .policy-sheet {
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--accent);
+      padding: 52px 56px;
+    }
+
+    .policy-section {
+      scroll-margin-top: 104px;
+      margin-bottom: 44px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .policy-section:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .policy-section h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 600;
+      color: var(--navy-950);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .policy-section h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--navy-950);
+      margin: 24px 0 10px;
+    }
+
+    .policy-section p {
+      font-size: 0.96rem;
+      color: var(--ink-secondary);
+      line-height: 1.78;
+      margin-bottom: 16px;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section p strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    code {
+      font-size: 0.88em;
+      background-color: var(--paper);
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      color: var(--navy-900);
+    }
+
+    /* Ficha de Identificación del Responsable */
+    .controller-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 22px 0;
+      background-color: var(--paper);
+      border: 1px solid var(--line);
+      padding: 24px 26px;
+    }
+
+    .controller-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .controller-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+    }
+
+    .controller-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--navy-950);
+    }
+
+    .controller-value a {
+      color: var(--navy-800);
+      text-decoration: underline;
+    }
+
+    /* Tablas Jurídicas */
+    .table-scroll {
+      margin: 22px 0 24px;
+      border: 1px solid var(--line);
+      overflow-x: auto;
+    }
+
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      background-color: var(--surface);
+      min-width: 660px;
+    }
+
+    .policy-table thead th {
+      background-color: var(--navy-950);
+      color: #ffffff;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      padding: 13px 16px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .policy-table tbody tr {
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .policy-table tbody tr:nth-child(even) {
+      background-color: var(--paper);
+    }
+
+    .policy-table tbody td {
+      padding: 14px 16px;
+      font-size: 0.86rem;
+      color: var(--ink-secondary);
+      line-height: 1.58;
+      vertical-align: top;
+    }
+
+    .policy-table tbody td:first-child {
+      font-weight: 600;
+      color: var(--navy-950);
+      width: 175px;
+      border-right: 1px solid var(--line-light);
+    }
+
+    .policy-table tbody td strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Grilla de Principios */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .principle-card {
+      background-color: var(--paper);
+      border: 1px solid var(--line);
+      padding: 18px 20px;
+    }
+
+    .principle-card h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--navy-950);
+      margin-bottom: 6px;
+    }
+
+    .principle-card p {
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+      line-height: 1.62;
+      margin-bottom: 0;
+    }
+
+    /* Listas limpias */
+    .policy-list {
+      list-style: none;
+      margin: 16px 0 20px;
+      border-top: 1px solid var(--line-light);
+    }
+
+    .policy-list li {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line-light);
+      font-size: 0.92rem;
+      color: var(--ink-secondary);
+      line-height: 1.68;
+    }
+
+    .policy-list li strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Nota destacada */
+    .callout-note {
+      background-color: var(--paper-alt);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      margin: 22px 0 0;
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+    }
+
+    .callout-note strong {
+      color: var(--navy-950);
+      font-weight: 600;
+    }
+
+    /* Firma Institucional Final */
+    .signature-box {
+      margin-top: 34px;
+      background-color: var(--navy-950);
+      color: #ffffff;
+      padding: 32px 36px;
+      border-top: 3px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .signature-text p {
+      font-size: 0.88rem;
+      color: #cbd7e3;
+      line-height: 1.6;
+      margin-bottom: 5px;
+    }
+
+    .signature-text p strong {
+      color: #e2c99e !important;
+      font-weight: 600;
+    }
+
+    .signature-author {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.45rem;
+      color: #ffffff;
+      margin-top: 8px;
+    }
+
+    .btn-firm {
+      display: inline-block;
+      background-color: #ffffff;
+      color: var(--navy-950);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 13px 24px;
+      border: 1px solid #ffffff;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-firm:hover {
+      background-color: transparent;
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       FOOTER ÚNICO (CON ENLACE A POLÍTICA DE PRIVACIDAD)
+       ========================================================= */
+    .site-footer {
+      background-color: var(--navy-950);
+      color: #9fb0c2;
+      border-top: 1px solid var(--line-dark);
+      padding: 64px 0 36px;
+      font-size: 0.86rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .footer-brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .footer-list {
+      list-style: none;
+    }
+
+    .footer-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer-list a {
+      color: #9fb0c2;
+      transition: color 0.2s ease;
+    }
+
+    .footer-list a:hover {
+      color: #ffffff;
+    }
+
+    .footer-meta {
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: #6e8296;
+    }
+
+    .footer-meta a {
+      color: #9fb0c2;
+      text-decoration: underline;
+    }
+
+    .footer-meta a:hover {
+      color: #ffffff;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+    @media (max-width: 1040px) {
+      .header-inner { gap: 10px !important; }
+      .brand { flex: 1 !important; min-width: 0 !important; flex-shrink: 1 !important; }
+      .brand-avatar { flex-shrink: 0 !important; }
+      .brand-titles { min-width: 0 !important; }
+      .brand-sub { white-space: normal !important; line-height: 1.2 !important; font-size: 0.65rem !important; }
+      .menu-btn { display: inline-block !important; flex-shrink: 0 !important; }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background-color: var(--navy-950);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 5%;
+        gap: 16px;
+        border-bottom: 1px solid var(--line-dark);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .policy-hero-grid,
+      .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .policy-toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .policy-sheet {
+        padding: 34px 24px;
+      }
+
+      .controller-grid,
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .signature-box {
+        padding: 26px 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ÚNICO ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img
+          src="ABOGADO%20MANRI%CC%81QUEZ.jpg"
+          onerror="this.onerror=null;this.src='ABOGADO%20MANR%C3%8DQUEZ.jpg';"
+          alt="Abogado Manríquez"
+          class="brand-avatar"
+        />
+        <div class="brand-titles">
+          <span class="brand-name">Abogado Manríquez</span>
+          <span class="brand-sub"><em>Daniel Manríquez Sansigolo</em> · el <em>«Abogado Manríquez»</em></span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Menú">Menú</button>
+
+      <ul class="main-nav" id="mainNav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-el-abogado.html">Sobre el Abogado</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medios.html">Medios</a></li>
+        <li><a href="videos-publicados.html">Videos Publicados</a></li>
+        <li><a href="canales-de-contacto.html">Canales de Contacto</a></li>
+        <li><a href="agendar-consulta.html" class="nav-highlight">Agendar Consulta</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- ==================== FIN HEADER ÚNICO ==================== -->
+
+  <main>
+    <!-- ==================== 1. CABECERA DE LA POLÍTICA ==================== -->
+    <section class="policy-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <ol>
+            <li><a href="index.html">Inicio</a> <span class="sep">/</span></li>
+            <li><span aria-current="page">Política de Privacidad y Tratamiento de Datos</span></li>
+          </ol>
+        </nav>
+
+        <div class="policy-hero-grid">
+          <div>
+            <span class="policy-kicker">Transparencia e Información · Artículo 14 ter Ley N° 21.719</span>
+            <h1>Política de Tratamiento de Datos Personales y Privacidad</h1>
+            <p class="policy-hero-lead">
+              Como abogado en ejercicio privado y titular de este sitio web, informo de manera clara, permanente y accesible qué datos personales trato, respecto de qué titulares, con qué finalidades específicas, bajo qué base de licitud, por cuánto tiempo los conservo y cómo puede usted ejercer sus derechos legales.
+            </p>
+          </div>
+
+          <aside class="doc-control-card" aria-label="Control del Documento">
+            <span class="doc-control-title">Control del Documento</span>
+            <ul class="doc-control-list">
+              <li>
+                <span>Instrumento:</span>
+                <strong>Política de Datos Personales</strong>
+              </li>
+              <li>
+                <span>Versión vigente:</span>
+                <strong>Versión 1.0 · Noviembre 2026</strong>
+              </li>
+              <li>
+                <span>Normativa:</span>
+                <strong>Ley N° 19.628 y Ley N° 21.719</strong>
+              </li>
+              <li>
+                <span>Publicación oficial:</span>
+                <strong>www.abogadomanriquez.cl</strong>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. CONTENIDO COMPLETO DE LA POLÍTICA ==================== -->
+    <section class="policy-wrapper">
+      <div class="container policy-layout">
+
+        <!-- Índice Lateral -->
+        <aside class="policy-toc" aria-label="Índice de la Política">
+          <div class="toc-title">Contenido</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. Propósito y ámbito de aplicación</a></li>
+            <li><a href="#sec-2">2. Identidad del Responsable</a></li>
+            <li><a href="#sec-3">3. Matriz de datos, fines y licitud</a></li>
+            <li><a href="#sec-4">4. Tratamientos por encargo corporativo</a></li>
+            <li><a href="#sec-5">5. Principios rectores del tratamiento</a></li>
+            <li><a href="#sec-6">6. Destinatarios y encargados</a></li>
+            <li><a href="#sec-7">7. Transferencias internacionales</a></li>
+            <li><a href="#sec-8">8. Plazos de conservación</a></li>
+            <li><a href="#sec-9">9. Seguridad y gestión de incidentes</a></li>
+            <li><a href="#sec-10">10. Infraestructura web y cookies</a></li>
+            <li><a href="#sec-11">11. Decisiones automatizadas</a></li>
+            <li><a href="#sec-12">12. Derechos del titular (ARSOP+)</a></li>
+            <li><a href="#sec-13">13. Procedimiento y reclamo ante Agencia</a></li>
+            <li><a href="#sec-14">14. Vigencia y actualizaciones</a></li>
+          </ul>
+          <div class="toc-contact-mini">
+            <strong>Canal de Privacidad y Derechos:</strong>
+            <a href="mailto:daniel@manriquezrivera.cl">daniel@manriquezrivera.cl</a><br />
+            Huérfanos 757, Of. 614, Santiago
+          </div>
+        </aside>
+
+        <!-- Cuerpo del Documento -->
+        <article class="policy-sheet">
+
+          <!-- SECCIÓN 1 -->
+          <section id="sec-1" class="policy-section">
+            <h2>1. ¿Cuál es el propósito y ámbito de aplicación de esta política?</h2>
+            <p>
+              El presente sitio web (<strong>www.abogadomanriquez.cl</strong>) es el portal profesional oficial de <strong>Daniel Manríquez Sansigolo</strong>, conocido públicamente como <em>«Abogado Manríquez»</em> y socio fundador de <strong>Manríquez Sansigolo Abogados</strong>. Este instrumento tiene por objeto dar estricto cumplimiento al deber de información y transparencia previsto en el artículo 14 ter de la Ley N° 19.628 sobre Protección de la Vida Privada, modificada por la Ley N° 21.719 (en adelante, la «Ley»).
+            </p>
+            <p>
+              Esta política se aplica a todas las operaciones de tratamiento de datos personales en las que Daniel Manríquez Sansigolo actúa en calidad de <strong>responsable del tratamiento</strong>: agendamiento de consultas legales personalizadas, recepción de consultas previas por canales de contacto, tramitación de posesiones efectivas y encargos extrajudiciales, patrocinio y representación judicial en causas civiles, laborales o corporativas, relación con proveedores, requerimientos de medios de comunicación y navegación en el sitio web <strong>www.abogadomanriquez.cl</strong>.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 2 -->
+          <section id="sec-2" class="policy-section">
+            <h2>2. Identificación del Responsable de los Datos y Canal de Contacto</h2>
+            <p>
+              El responsable del tratamiento es la persona natural o jurídica que decide acerca de los fines y medios del tratamiento de los datos personales. Respecto de los tratamientos regulados en esta política, los datos de identificación y contacto directo del responsable son los siguientes:
+            </p>
+
+            <div class="controller-grid">
+              <div class="controller-item">
+                <span class="controller-label">Responsable del Tratamiento</span>
+                <span class="controller-value">Daniel Manríquez Sansigolo</span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">RUT</span>
+                <span class="controller-value">17.700.585-1</span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">Estudio Jurídico y Domicilio Postal</span>
+                <span class="controller-value">Manríquez Sansigolo Abogados · Huérfanos 757, of. 614, Santiago</span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">Teléfono y WhatsApp Oficial</span>
+                <span class="controller-value"><a href="https://wa.me/56968434272" target="_blank" rel="noopener">+56 9 6843 4272</a></span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">Correo Electrónico Oficial</span>
+                <span class="controller-value"><a href="mailto:daniel@manriquezrivera.cl">daniel@manriquezrivera.cl</a></span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">Canales Web Oficiales</span>
+                <span class="controller-value"><a href="canales-de-contacto.html">abogadomanriquez.cl/canales-de-contacto.html</a></span>
+              </div>
+            </div>
+
+            <p>
+              A través de cualquiera de estos canales, los titulares pueden dirigir sus consultas sobre privacidad, retirar su consentimiento cuando proceda o presentar solicitudes formales de ejercicio de derechos legales, las cuales son atendidas directamente por el abogado responsable individualizado precedentemente.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 3 -->
+          <section id="sec-3" class="policy-section">
+            <h2>3. ¿Qué datos personales tratamos, para qué finalidad y bajo qué base de licitud?</h2>
+            <p>
+              A continuación se detalla cada actividad de tratamiento realizada en calidad de responsable, indicando las categorías de datos, los titulares concernidos, la finalidad específica, la fuente de origen y la base de licitud que legitima la operación conforme a los artículos 12, 13 y 16 de la Ley:
+            </p>
+
+            <div class="table-scroll">
+              <table class="policy-table">
+                <thead>
+                  <tr>
+                    <th>Actividad</th>
+                    <th>Datos y Titulares</th>
+                    <th>Finalidad Específica</th>
+                    <th>Base de Licitud (Ley 21.719)</th>
+                    <th>Origen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Agendamiento de consultas legales</td>
+                    <td>Nombre completo, correo electrónico, teléfono, modalidad (online o presencial), fecha/hora seleccionada, motivo general y comprobante de pago de quienes reservan hora.</td>
+                    <td>Reservar el bloque de 45 minutos, enviar instrucciones de formalización de honorarios ($45.000 CLP), generar enlace de videollamada (Google Meet), ejecutar la asesoría y emitir la boleta o factura respectiva.</td>
+                    <td>Aplicación de medidas precontractuales y ejecución del contrato de consulta jurídica (art. 13 letra c)), más obligación legal tributaria (art. 13 letra b)).</td>
+                    <td>El propio titular al agendar.</td>
+                  </tr>
+                  <tr>
+                    <td>Consultas previas de orientación o coordinación</td>
+                    <td>Nombre o razón social, teléfono o correo, materia consultada y resumen del caso enviados voluntariamente por correo electrónico o WhatsApp.</td>
+                    <td>Confirmar si el asunto corresponde a nuestras áreas de práctica, coordinar horarios especiales y remitir propuestas de servicios solicitadas.</td>
+                    <td>Aplicación de medidas precontractuales a solicitud del titular (art. 13 letra c)).</td>
+                    <td>El propio titular.</td>
+                  </tr>
+                  <tr>
+                    <td>Posesiones efectivas, contratos y patrocinio judicial</td>
+                    <td>Datos identificatorios (nombre, RUT, estado civil, domicilio, profesión), certificados de Registro Civil, antecedentes patrimoniales, contractuales, laborales o procesales de clientes, causantes, herederos o contrapartes.</td>
+                    <td>Tramitar posesiones efectivas e impuestos de herencia (Registro Civil, SII, CBR), redactar escrituras o contratos y asumir la defensa judicial ante Tribunales de Justicia o servicios administrativos.</td>
+                    <td>Ejecución del mandato o contrato de servicios profesionales de abogacía (art. 13 letra c)), cumplimiento de obligaciones legales procesales/tributarias (art. 13 letra b)) y formulación o defensa de pretensiones judiciales.</td>
+                    <td>El cliente, registros públicos o expedientes judiciales.</td>
+                  </tr>
+                  <tr>
+                    <td>Proveedores y colaboradores externos</td>
+                    <td>Nombre, RUT, datos de contacto profesional y antecedentes bancarios o tributarios de peritos, receptores judiciales y proveedores.</td>
+                    <td>Gestionar encargos auxiliares, efectuar pagos de honorarios o servicios y declarar impuestos mensuales y anuales.</td>
+                    <td>Ejecución contractual (art. 13 letra c)) y cumplimiento de obligaciones legales tributarias (art. 13 letra b)).</td>
+                    <td>El propio proveedor o colaborador.</td>
+                  </tr>
+                  <tr>
+                    <td>Prensa, medios y extensión académica</td>
+                    <td>Nombre, medio de comunicación o institución académica, cargo y datos de contacto de periodistas u organizadores.</td>
+                    <td>Coordinar entrevistas en televisión, prensa escrita, radio, columnas de opinión o seminarios jurídicos.</td>
+                    <td>Interés legítimo en gestionar requerimientos periodísticos y actividades de divulgación cívica (art. 13 letra d)).</td>
+                    <td>El propio periodista o institución.</td>
+                  </tr>
+                  <tr>
+                    <td>Seguridad y funcionamiento técnico web</td>
+                    <td>Dirección IP, tipo de navegador, fecha/hora de conexión y metadatos técnicos de red de los visitantes del sitio web.</td>
+                    <td>Servir las páginas estáticas del sitio, proveer cifrado HTTPS, desplegar recursos interactivos a petición del usuario y mitigar tráfico automatizado malicioso.</td>
+                    <td>Interés legítimo en resguardar la seguridad de la red y la disponibilidad del sitio web (art. 13 letra d)).</td>
+                    <td>Dispositivo del visitante.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout-note">
+              <strong>Regla sobre Datos Personales Sensibles y Secreto Profesional:</strong> Solicitamos expresamente a los visitantes <strong>no incluir datos sensibles innecesarios</strong> (tales como diagnósticos médicos detallados, biometría, convicciones religiosas o filiación sindical) en mensajes preliminares previos a la contratación; si se reciben sin ser pertinentes, serán suprimidos de inmediato. Cuando el tratamiento de antecedentes sensibles (por ejemplo, licencias médicas o informes psicológicos en causas laborales por accidentes o Ley Karin) resulte estrictamente indispensable dentro de una consulta agendada o patrocinio judicial vigente, dicho tratamiento se realiza al amparo del artículo 16 de la Ley (consentimiento expreso y/o necesidad para la formulación, ejercicio o defensa de un derecho ante los tribunales de justicia) y bajo estricto <strong>secreto profesional de abogado</strong>.
+            </div>
+          </section>
+
+          <!-- SECCIÓN 4 -->
+          <section id="sec-4" class="policy-section">
+            <h2>4. ¿Qué ocurre cuando tratamos datos por encargo de empresas clientes?</h2>
+            <p>
+              Cuando asesoramos a empresas, directorios o asociaciones gremiales en materias de derecho corporativo, auditoría laboral preventiva o adecuación a la Ley N° 21.719 (incluyendo proyectos ejecutados a través de nuestra división especializada <a href="https://legaldatos.cl" target="_blank" rel="noopener" style="text-decoration:underline;color:var(--navy-800);font-weight:600;">LegalDatos</a>), la organización cliente puede darnos acceso a información alojada en sus propios sistemas o carpetas corporativas.
+            </p>
+            <p>
+              En dichos encargos empresariales, el <strong>responsable del tratamiento</strong> continúa siendo exclusivamente la empresa cliente, actuando nuestro estudio en calidad de <strong>encargado o mandatario del tratamiento</strong> (conforme al artículo 15 bis de la Ley), ciñéndose a las instrucciones documentadas del cliente, al respectivo Contrato de Encargo de Tratamiento (DPA) y al deber de confidencialidad profesional. Si un titular de la base de datos de una empresa cliente nos remite directamente una solicitud de derechos ARSOP+, la derivaremos formalmente al cliente responsable dentro de un plazo máximo de 3 días hábiles.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 5 -->
+          <section id="sec-5" class="policy-section">
+            <h2>5. Principios rectores que garantizamos en cada tratamiento</h2>
+            <p>
+              Toda operación sobre datos personales ejecutada por Daniel Manríquez Sansigolo se sujeta rigurosamente a los principios establecidos en la Ley N° 19.628 y sus modificaciones introducidas por la Ley N° 21.719:
+            </p>
+
+            <div class="principles-grid">
+              <div class="principle-card">
+                <h4>5.1 Licitud y Lealtad</h4>
+                <p>Solo tratamos datos personales amparados en una causal legal habilitante válida, informando con total transparencia las condiciones de atención y honorarios sin emplear medios engañosos.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.2 Finalidad Específica</h4>
+                <p>Los antecedentes recibidos se emplean exclusivamente para evacuar la consulta jurídica, tramitar el encargo encomendado o cumplir deberes legales conexos, jamás para fines incompatibles.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.3 Proporcionalidad y Minimización</h4>
+                <p>Solicitamos únicamente los antecedentes pertinentes y necesarios para cada etapa: datos básicos de contacto al reservar hora, y documentación probatoria solo cuando el caso lo exige.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.4 Calidad y Exactitud</h4>
+                <p>Velamos por que los antecedentes personales, hereditarios, contractuales o procesales se mantengan exactos, íntegros y actualizados conforme a la documentación oficial aportada.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.5 Limitación en el Tiempo</h4>
+                <p>Conservamos los datos solo durante el tiempo necesario para ejecutar el encargo profesional y cubrir los plazos legales tributarios o de prescripción civil aplicables.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.6 Confidencialidad y Secreto Profesional</h4>
+                <p>Además del deber legal de confidencialidad del artículo 14 bis de la Ley, toda consulta y documento confiado al abogado está protegido por el secreto profesional garantizado por el ordenamiento jurídico chileno.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 6 -->
+          <section id="sec-6" class="policy-section">
+            <h2>6. ¿A quién comunicamos sus datos personales? (Destinatarios y Encargados)</h2>
+            <p>
+              <strong>Jamás vendemos, arrendamos ni comercializamos bases de datos personales con terceros.</strong> Para la operación tecnológica segura del estudio y la ejecución de los encargos jurídicos, intervienen únicamente los siguientes encargados o destinatarios legítimos:
+            </p>
+            <ul class="policy-list">
+              <li>
+                <strong>Google LLC (Google Workspace y Google Calendar):</strong> Provee nuestra infraestructura corporativa de correo electrónico, agenda oficial de reserva de citas (<em>Google Calendar Appointment Scheduling</em>), sesiones de videollamada cifradas (Google Meet) y repositorio documental seguro (Google Drive).
+              </li>
+              <li>
+                <strong>GitHub, Inc. y Cloudflare, Inc.:</strong> Proveen el alojamiento del código estático público (HTML/CSS/JS) de este sitio web, la distribución de red (CDN), el cifrado SSL/TLS y la protección contra ataques informáticos. Ningún formulario de este sitio almacena bases de datos de clientes en repositorios públicos.
+              </li>
+              <li>
+                <strong>Entidades bancarias o pasarelas de pago (ej. Mercado Pago / Bancos nacionales):</strong> Intervienen exclusivamente para procesar transferencias electrónicas o pagos con tarjeta respecto de consultas o encargos contratados.
+              </li>
+              <li>
+                <strong>Meta Platforms, Inc. (WhatsApp):</strong> Interviene únicamente cuando el propio usuario decide voluntariamente comunicarse o pulsar el botón de envío hacia nuestro canal de WhatsApp (<code>+56 9 6843 4272</code>).
+              </li>
+              <li>
+                <strong>Órganos públicos, Tribunales y Notarías/Conservadores:</strong> Cuando usted nos encomienda tramitar una posesión efectiva, contrato o litigio, sus antecedentes se presentan ante los organismos legalmente competentes para resolver su gestión (Poder Judicial, Servicio de Registro Civil e Identificación, Servicio de Impuestos Internos, Dirección del Trabajo, Notarías y Conservadores de Bienes Raíces).
+              </li>
+            </ul>
+          </section>
+
+          <!-- SECCIÓN 7 -->
+          <section id="sec-7" class="policy-section">
+            <h2>7. Transferencias Internacionales de Datos</h2>
+            <p>
+              Nuestros proveedores de infraestructura tecnológica (<strong>Google LLC</strong>, <strong>GitHub, Inc.</strong> y <strong>Cloudflare, Inc.</strong>) mantienen servidores y centros de procesamiento de datos fuera del territorio de Chile, principalmente en los Estados Unidos de América.
+            </p>
+            <p>
+              En conformidad con el artículo 27 inciso primero letra b) de la Ley, dichas transferencias internacionales cuentan con garantías adecuadas de protección mediante los anexos contractuales de procesamiento de datos (<em>Data Processing Addendum</em> y cláusulas contractuales tipo) suscritos con dichos proveedores corporativos, asegurando estándares de seguridad, cifrado, confidencialidad y ejercicio de derechos equivalentes a los exigidos por la normativa chilena vigente.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 8 -->
+          <section id="sec-8" class="policy-section">
+            <h2>8. ¿Por cuánto tiempo conservamos sus datos personales?</h2>
+            <p>
+              Los datos personales se conservan únicamente por el período indispensable para cumplir la finalidad de su recolección y responder ante obligaciones legales, procesales o tributarias:
+            </p>
+
+            <div class="table-scroll">
+              <table class="policy-table">
+                <thead>
+                  <tr>
+                    <th>Categoría de Tratamiento</th>
+                    <th>Plazo de Conservación y Criterio de Supresión</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Consultas preliminares no concretadas</td>
+                    <td><strong>1 año</strong> contado desde el último intercambio de mensajes, procediendo luego a su eliminación periódica si no se formaliza una consulta o encargo profesional.</td>
+                  </tr>
+                  <tr>
+                    <td>Consultas agendadas, posesiones efectivas y causas judiciales</td>
+                    <td>Mientras dure el encargo profesional o litigio y, una vez concluido, hasta por <strong>6 años</strong> para cumplir obligaciones tributarias ante el SII (art. 200 del Código Tributario) y cubrir los plazos de prescripción civil ordinarios (5 años), devolviendo o eliminando posteriormente la documentación de respaldo.</td>
+                  </tr>
+                  <tr>
+                    <td>Pre-reservas de agenda no confirmadas</td>
+                    <td>Las pre-reservas horarias cuyo pago no sea formalizado se liberan del calendario activo y sus registros accesorios se depuran dentro de un plazo máximo de <strong>6 meses</strong>.</td>
+                  </tr>
+                  <tr>
+                    <td>Registros técnicos de seguridad web</td>
+                    <td>Por el lapso estrictamente necesario para fines de seguridad informática y mitigación de ataques de red, sin exceder de <strong>12 meses</strong>.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 9 -->
+          <section id="sec-9" class="policy-section">
+            <h2>9. Medidas de Seguridad y Gestión de Incidentes</h2>
+            <p>
+              De acuerdo con los artículos 14 quinquies y 14 septies de la Ley, aplicamos medidas técnicas y organizativas proporcionales a la naturaleza confidencial de la actividad jurídica:
+            </p>
+            <ul class="policy-list">
+              <li>
+                <strong>Cifrado integral:</strong> Toda navegación en <code>abogadomanriquez.cl</code> opera sobre conexión segura HTTPS/TLS y los antecedentes documentales de clientes se almacenan cifrados en repositorios privados de Google Workspace.
+              </li>
+              <li>
+                <strong>Autenticación multifactor (2FA) y control de acceso:</strong> El acceso a cuentas de correo, calendario y carpetas de clientes se encuentra restringido mediante verificación en dos pasos obligatoria y contraseñas robustas.
+              </li>
+              <li>
+                <strong>Sitio estático sin bases de datos expuestas:</strong> La web está construida en código HTML5 nativo limpio. Los formularios de coordinación preparan el mensaje directamente en el navegador del usuario (vía cliente de correo o WhatsApp) sin almacenar bases de datos SQL vulnerables en servidores web públicos.
+              </li>
+              <li>
+                <strong>Gestión de vulneraciones de seguridad:</strong> Ante cualquier incidente de seguridad que comprometa datos personales generando un riesgo significativo para los derechos de sus titulares, se activará el protocolo de contención, registro y notificación oportuna a la Agencia de Protección de Datos Personales y a los afectados conforme al artículo 14 sexies de la Ley.
+              </li>
+            </ul>
+          </section>
+
+          <!-- SECCIÓN 10 -->
+          <section id="sec-10" class="policy-section">
+            <h2>10. Funcionamiento del Sitio Web, Servicios Embebidos y Cookies</h2>
+            <p>
+              Nuestro sitio web <strong>no utiliza cookies propias de seguimiento publicitario ni píxeles de remarketing</strong>. Únicamente intervienen recursos técnicos de seguridad y widgets funcionales de terceros cuando el visitante interactúa con las secciones respectivas:
+            </p>
+
+            <div class="table-scroll">
+              <table class="policy-table">
+                <thead>
+                  <tr>
+                    <th>Recurso / Servicio</th>
+                    <th>Proveedor y Finalidad en el Sitio</th>
+                    <th>Clasificación</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Seguridad de Red y Alojamiento</td>
+                    <td>Gestionado por <strong>Cloudflare / GitHub Pages</strong> para distribuir el sitio de forma segura, validar tráfico legítimo y mitigar ataques DDoS.</td>
+                    <td>Técnica y de seguridad (Estrictamente necesaria)</td>
+                  </tr>
+                  <tr>
+                    <td>Agenda Oficial (Google Calendar)</td>
+                    <td>Módulo embebido en la página <em>Agendar Consulta</em> provisto por <strong>Google LLC</strong> para mostrar disponibilidad horaria en tiempo real y procesar la reserva solicitada por el usuario.</td>
+                    <td>Funcional a solicitud del usuario</td>
+                  </tr>
+                  <tr>
+                    <td>Reproductor YouTube y Google Maps</td>
+                    <td>En <em>Videos Publicados</em> y <em>Medios</em> el reproductor de <strong>YouTube</strong> se carga bajo demanda solo cuando el usuario pulsa «Reproducir». En <em>Canales de Contacto</em> se despliega el mapa referencial de <strong>Google Maps</strong> de nuestra oficina en Santiago.</td>
+                    <td>Funcional / Multimedia</td>
+                  </tr>
+                  <tr>
+                    <td>Google Fonts</td>
+                    <td>Carga de las familias tipográficas <em>Cormorant Garamond</em> y <em>Plus Jakarta Sans</em> para la visualización editorial del sitio, sin perfilamiento comercial.</td>
+                    <td>Funcionalidad visual</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              Usted puede configurar su navegador en cualquier momento para bloquear cookies de terceros; considere únicamente que el bloqueo estricto de cookies de Google en algunos navegadores podría requerir abrir el calendario de reservas en una pestaña externa mediante el enlace directo dispuesto en la página de agendamiento.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 11 -->
+          <section id="sec-11" class="policy-section">
+            <h2>11. Inexistencia de Decisiones Automatizadas y Elaboración de Perfiles</h2>
+            <p>
+              En este estudio jurídico <strong>no se adoptan decisiones individuales basadas únicamente en el tratamiento automatizado de datos personales</strong> ni se realiza perfilamiento predictivo de visitantes o clientes (artículo 8° bis de la Ley). Toda evaluación jurídica, revisión documental, estrategia procesal y respuesta profesional es ejecutada personalmente por el abogado Daniel Manríquez Sansigolo.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 12 -->
+          <section id="sec-12" class="policy-section">
+            <h2>12. ¿Cuáles son sus Derechos como Titular de Datos (ARSOP+)?</h2>
+            <p>
+              Conforme a los artículos 4° a 10 de la Ley N° 19.628 (reformada por la Ley N° 21.719), toda persona natural titular de datos cuenta con los siguientes derechos irrenunciables y de ejercicio gratuito:
+            </p>
+            <ul class="policy-list">
+              <li>
+                <strong>Derecho de Acceso:</strong> Solicitar confirmación sobre si sus datos personales están siendo tratados por nosotros y obtener copia de ellos, junto con información sobre su origen, finalidad, destinatarios y plazos de conservación.
+              </li>
+              <li>
+                <strong>Derecho de Rectificación:</strong> Exigir que se corrijan, actualicen o completen aquellos datos personales que resulten inexactos, incompletos o desactualizados.
+              </li>
+              <li>
+                <strong>Derecho de Supresión (Cancelación):</strong> Solicitar la eliminación de sus datos cuando ya no sean necesarios para los fines que motivaron su entrega, retire su consentimiento o el tratamiento sea ilícito, salvo que exista un deber legal de conservación o sean necesarios para el ejercicio o defensa de acciones judiciales.
+              </li>
+              <li>
+                <strong>Derecho de Oposición:</strong> Oponerse por motivos fundados y legítimos a que se lleve a cabo un tratamiento determinado basado en el interés legítimo.
+              </li>
+              <li>
+                <strong>Derecho a la Portabilidad:</strong> Solicitar copia de los datos personales que nos haya proporcionado en un formato electrónico estructurado, de uso común y lectura mecánica, cuando el tratamiento sea automatizado y se funde en el consentimiento o en un contrato.
+              </li>
+              <li>
+                <strong>Derecho de Bloqueo Temporal:</strong> Solicitar la suspensión temporal del tratamiento de sus datos mientras se tramita y resuelve un requerimiento de rectificación, supresión u oposición.
+              </li>
+              <li>
+                <strong>Revocación del Consentimiento:</strong> Retirar en cualquier momento y sin expresión de causa el consentimiento otorgado para tratamientos fundados en dicha causal, con efecto hacia el futuro.
+              </li>
+            </ul>
+          </section>
+
+          <!-- SECCIÓN 13 -->
+          <section id="sec-13" class="policy-section">
+            <h2>13. Procedimiento para Ejercer sus Derechos y Reclamo ante la Agencia</h2>
+            <p>
+              Para ejercer cualquiera de sus derechos legales, el titular o su representante debidamente acreditado puede enviar una solicitud escrita al correo electrónico <strong><a href="mailto:daniel@manriquezrivera.cl" style="color:var(--navy-800);text-decoration:underline;">daniel@manriquezrivera.cl</a></strong> o presentarla a través de nuestros <a href="canales-de-contacto.html" style="color:var(--navy-800);font-weight:600;text-decoration:underline;">canales oficiales de contacto</a>, señalando (artículo 11 de la Ley):
+            </p>
+            <ul class="policy-list">
+              <li>
+                <strong>1. Identificación:</strong> Nombre completo y número de cédula de identidad o documento equivalente del solicitante (adjuntando poder suficiente si comparece en representación de un tercero).
+              </li>
+              <li>
+                <strong>2. Medio de notificación:</strong> Correo electrónico o domicilio postal donde desea recibir nuestra respuesta formal por escrito.
+              </li>
+              <li>
+                <strong>3. Petición clara y específica:</strong> Indicación del derecho que ejerce (acceso, rectificación, supresión, oposición, portabilidad o bloqueo) y de los datos a los que se refiere, acompañando los documentos que respalden la solicitud cuando corresponda.
+              </li>
+            </ul>
+            <p>
+              Acusaremos recibo de su requerimiento y emitiremos respuesta fundada y gratuita dentro del plazo máximo legal de <strong>30 días corridos</strong> desde su recepción (prorrogables por una sola vez hasta por otros 30 días corridos cuando la complejidad o volumen de antecedentes lo justifique, informándolo antes del vencimiento). Las solicitudes fundadas de <strong>bloqueo temporal</strong> asociadas a rectificación, supresión u oposición serán resueltas dentro de los <strong>2 días hábiles</strong> siguientes.
+            </p>
+            <p>
+              <strong>Derecho a reclamar ante la Autoridad de Control:</strong> En caso de falta de respuesta dentro del plazo legal o de denegación total o parcial de su requerimiento, usted tiene derecho a interponer reclamo ante la <strong>Agencia de Protección de Datos Personales</strong> dentro de los 30 días corridos siguientes a la respuesta negativa o al vencimiento del plazo legal para responder, conforme a los artículos 11 y 41 de la Ley.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 14 -->
+          <section id="sec-14" class="policy-section">
+            <h2>14. Vigencia, Control de Versiones y Modificaciones</h2>
+            <p>
+              La presente Política de Tratamiento de Datos Personales y Privacidad corresponde a la <strong>Versión 1.0</strong>, aprobada y publicada en <strong>noviembre de 2026</strong>. Este documento será actualizado periódicamente para reflejar las instrucciones generales que imparta la Agencia de Protección de Datos Personales o eventuales cambios en nuestros canales de atención, manteniéndose siempre disponible en <strong>www.abogadomanriquez.cl/politica-de-privacidad.html</strong>.
+            </p>
+
+            <!-- Firma Institucional -->
+            <div class="signature-box">
+              <div class="signature-text">
+                <p>Responsable del Tratamiento · <strong>Manríquez Sansigolo Abogados</strong></p>
+                <p>Huérfanos 757, oficina 614, Santiago · RUT 17.700.585-1 · <strong>daniel@manriquezrivera.cl</strong></p>
+                <div class="signature-author">Daniel Manríquez Sansigolo · Abogado</div>
+              </div>
+              <a href="canales-de-contacto.html" class="btn-firm">
+                Ir a Canales de Contacto →
+              </a>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ÚNICO ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-title">Abogado Manríquez</div>
+          <p style="line-height:1.7;margin-bottom:12px;">
+            Daniel Manríquez Sansigolo.<br />
+            Ejercicio privado y consultoría legal en Santiago de Chile.
+          </p>
+          <p style="font-size:0.8rem;color:#7d91a6;">
+            Huérfanos 757, oficina 614, Santiago.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Secciones</h4>
+          <ul class="footer-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-el-abogado.html">Sobre el Abogado</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="medios.html">Medios</a></li>
+            <li><a href="videos-publicados.html">Videos Publicados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atención y Firmas</h4>
+          <ul class="footer-list">
+            <li><a href="agendar-consulta.html">Agendar Consulta</a></li>
+            <li><a href="canales-de-contacto.html">Canales de Contacto</a></li>
+            <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
+            <li><a href="https://legaldatos.cl" target="_blank" rel="noopener">LegalDatos.cl</a></li>
+            <li><a href="https://lextrabajador.cl" target="_blank" rel="noopener">LexTrabajador.cl</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Directo</h4>
+          <ul class="footer-list">
+            <li><a href="mailto:daniel@manriquezrivera.cl">daniel@manriquezrivera.cl</a></li>
+            <li><a href="https://wa.me/56968434272" target="_blank" rel="noopener">+56 9 6843 4272</a></li>
+            <li><a href="https://www.youtube.com/@abogadomanriquez" target="_blank" rel="noopener">YouTube · @abogadomanriquez</a></li>
+            <li><a href="https://www.instagram.com/abogadomanriquez" target="_blank" rel="noopener">Instagram · @abogadomanriquez</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <span>© 2026 Daniel Manríquez Sansigolo. Todos los derechos reservados.</span>
+        <span>Manríquez Sansigolo Abogados · <a href="politica-de-privacidad.html">Política de Privacidad</a></span>
+      </div>
+    </div>
+  </footer>
+  <!-- ==================== FIN FOOTER ÚNICO ==================== -->
+
+  <script>
+    // Menú responsive
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      menuBtn.textContent = mainNav.classList.contains('open') ? 'Cerrar' : 'Menú';
+    });
+
+    // Respaldo automático Favicon
+    const favCheck = new Image();
+    favCheck.onerror = () => {
+      document.getElementById('site-favicon').href = 'ABOGADO%20MANR%C3%8DQUEZ.jpg';
+    };
+    favCheck.src = 'ABOGADO%20MANRI%CC%81QUEZ.jpg';
+  </script>
+</body>
+</html>
