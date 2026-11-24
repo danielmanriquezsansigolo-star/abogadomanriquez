@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Videos Publicados — Abogado Manríquez</title>
-  <meta name="description" content="Catálogo cronológico y temático de videos educativos publicados por Daniel Manríquez Sansigolo (@abogadomanriquez) en YouTube." />
+  <meta name="description" content="Catálogo completo en orden cronológico de los videos publicados por Daniel Manríquez Sansigolo (@abogadomanriquez)." />
 
   <!-- Favicon -->
   <link id="site-favicon" rel="icon" type="image/jpeg" href="ABOGADO%20MANRI%CC%81QUEZ.jpg" />
@@ -356,7 +356,7 @@
     }
 
     /* =========================================================
-       GRILLA DE VIDEOS CON MINIATURAS ORIGINALES
+       GRILLA COMPLETA DE VIDEOS CON MINIATURAS REALES
        ========================================================= */
     .catalog-section {
       padding: 52px 0 96px;
@@ -492,49 +492,6 @@
       font-size: 0.75rem;
       color: var(--ink-muted);
       text-decoration: underline;
-    }
-
-    /* =========================================================
-       BANNER FINAL DE ARCHIVO COMPLETO EN YOUTUBE
-       ========================================================= */
-    .archive-more-box {
-      margin-top: 56px;
-      background-color: var(--paper-alt);
-      border: 1px solid var(--line);
-      padding: 34px 36px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .archive-more-box h3 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.65rem;
-      color: var(--navy-950);
-      margin-bottom: 4px;
-    }
-
-    .archive-more-box p {
-      font-size: 0.9rem;
-      color: var(--ink-secondary);
-    }
-
-    .btn-solid-navy {
-      display: inline-block;
-      padding: 13px 22px;
-      background-color: var(--navy-900);
-      color: #ffffff;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      transition: background-color 0.2s ease;
-    }
-
-    .btn-solid-navy:hover {
-      background-color: var(--navy-950);
     }
 
     /* =========================================================
@@ -739,10 +696,6 @@
       .footer-grid {
         grid-template-columns: 1fr;
       }
-
-      .archive-more-box {
-        padding: 26px 22px;
-      }
     }
   </style>
 </head>
@@ -784,11 +737,11 @@
     <section class="videos-hero">
       <div class="container videos-hero-grid">
         <div>
-          <span class="section-kicker">Archivo Audiovisual</span>
+          <span class="section-kicker">Archivo Audiovisual Completo</span>
           <h1>Videos publicados y guías legales ciudadanas.</h1>
           <div class="rule-gold"></div>
           <p>
-            Publicaciones sincronizadas automáticamente con el canal oficial <strong>@abogadomanriquez</strong> y el repertorio destacado del estudio. Todas las cápsulas pueden reproducirse directamente en esta página.
+            Catálogo íntegro en orden cronológico de los videos publicados en el canal oficial <strong>@abogadomanriquez</strong>. Filtre por materia jurídica, ordene por popularidad o reproduzca cualquier video directamente en esta página.
           </p>
         </div>
 
@@ -796,7 +749,7 @@
           <span class="ch-handle">@abogadomanriquez</span>
           <span class="ch-stats">Más de 15.400 suscriptores · YouTube Oficial</span>
           <a href="https://www.youtube.com/@abogadomanriquez/videos" target="_blank" rel="noopener" class="btn-channel-ext">
-            Ver canal completo en YouTube ↗
+            Visitar canal en YouTube ↗
           </a>
         </aside>
       </div>
@@ -812,14 +765,14 @@
             <input
               type="search"
               id="videoSearch"
-              placeholder="Buscar video por tema (ej. posesión efectiva, SII, embargo, arriendo, autodespido)..."
+              placeholder="Buscar video por tema (ej. posesión efectiva, SII, embargo, arriendo, despido, alimentos)..."
               aria-label="Buscar videos"
             />
           </div>
 
           <div class="sort-select-wrap">
             <select id="videoSort" aria-label="Ordenar videos">
-              <option value="recent">Orden: Más recientes primero</option>
+              <option value="recent">Orden: Fecha de publicación (Más recientes)</option>
               <option value="popular">Orden: Más vistos primero</option>
               <option value="oldest">Orden: Más antiguos primero</option>
             </select>
@@ -828,25 +781,15 @@
       </div>
     </section>
 
-    <!-- ==================== CATÁLOGO CON MINIATURAS REALES ==================== -->
+    <!-- ==================== CATÁLOGO COMPLETO CON MINIATURAS REALES ==================== -->
     <section class="catalog-section">
       <div class="container">
         <div class="results-status">
-          <span id="resultsCounter">Sincronizando publicaciones con YouTube...</span>
+          <span id="resultsCounter">Cargando catálogo de videos...</span>
           <span>¿Necesita evaluar su caso en privado? <a href="agendar-consulta.html" style="color:var(--navy-900);font-weight:600;text-decoration:underline;">Agendar consulta ($45.000)</a></span>
         </div>
 
         <div class="videos-grid" id="videosGrid"></div>
-
-        <div class="archive-more-box">
-          <div>
-            <h3>Archivo histórico completo en YouTube</h3>
-            <p>Explore las 64 cápsulas y transmisiones históricas publicadas desde 2020 directamente en el canal @abogadomanriquez.</p>
-          </div>
-          <a href="https://www.youtube.com/@abogadomanriquez/videos" target="_blank" rel="noopener" class="btn-solid-navy">
-            Ver los 64 videos en YouTube ↗
-          </a>
-        </div>
       </div>
     </section>
   </main>
@@ -937,12 +880,9 @@
     };
     favCheck.src = 'ABOGADO%20MANRI%CC%81QUEZ.jpg';
 
-    // ID oficial de tu canal de YouTube (@abogadomanriquez)
-    const YOUTUBE_CHANNEL_ID = "UCOAxcVJMrMi5behXSz7nj0w";
-
     function extractYouTubeId(url) {
       if (!url) return "";
-      const regExp = /(?:youtube\.com\/(?:watch\?.*v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+      const regExp = /(?:youtube\.com\/(?:watch\?.*v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
       const match = url.match(regExp);
       return match ? match[1] : "";
     }
@@ -956,37 +896,15 @@
       return num;
     }
 
-    // Clasificador temático automático para videos nuevos leídos desde el feed RSS de YouTube
-    function inferCategoriesFromTitle(title) {
-      const t = title.toLowerCase();
-      const cats = [];
-      if (t.includes('posesión efectiva') || t.includes('posesion efectiva') || t.includes('herencia')) {
-        cats.push('Posesión Efectiva');
-      }
-      if (t.includes('tutorial') || t.includes('cómo ') || t.includes('como ') || t.includes('aprende a') || t.includes('formulario') || t.includes('html')) {
-        cats.push('Tutoriales');
-      }
-      if (t.includes('gananciales') || t.includes('alimentos') || t.includes('divorcio') || t.includes('visitas') || t.includes('apellido') || t.includes('madres')) {
-        cats.push('Derecho de Familia');
-      }
-      if (t.includes('despido') || t.includes('autodespido') || t.includes('teletrabajo') || t.includes('laboral') || t.includes('vacaciones') || t.includes('trabajador')) {
-        cats.push('Derecho Laboral');
-      }
-      if (t.includes('cae') || t.includes('mascota') || t.includes('casa') || t.includes('arriendo') || t.includes('embargo') || t.includes('deuda') || t.includes('dicom') || t.includes('quiebra') || t.includes('tercería') || t.includes('ruidos')) {
-        cats.push('Derecho Civil');
-      }
-      if (cats.length === 0) {
-        cats.push('Constitucional y Otros');
-      }
-      return cats;
-    }
-
-    function formatSpanishDate(isoStr) {
-      if (!isoStr) return "";
-      const d = new Date(isoStr);
-      if (isNaN(d)) return "";
-      return d.toLocaleDateString('es-CL', { year: 'numeric', month: 'short' });
-    }
+    const CATEGORY_ORDER = [
+      "Todos",
+      "Posesión Efectiva",
+      "Tutoriales",
+      "Derecho Civil",
+      "Derecho Laboral",
+      "Derecho de Familia",
+      "Constitucional y Otros"
+    ];
 
     let VIDEOS_LIST = [];
     let ALL_CATEGORIES = ["Todos"];
@@ -998,97 +916,50 @@
     const videosGridEl = document.getElementById('videosGrid');
     const resultsCounterEl = document.getElementById('resultsCounter');
 
-    // Carga simultánea: 1) Feed RSS en vivo de YouTube (últimos 15 videos con ID real) + 2) repertorio-videos.html (solo aquellos con ID real de YouTube)
-    async function loadHybridCatalog() {
-      const byId = new Map();
-
-      // A) Intentar sincronizar los últimos 15 videos en vivo desde el feed oficial del canal
+    // Lee exclusivamente repertorio-videos.html (cero Shorts, orden exacto de publicación)
+    async function loadRepertorio() {
       try {
-        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`;
-        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
-        const rssRes = await fetch(apiUrl);
-        if (rssRes.ok) {
-          const data = await rssRes.json();
-          if (data && Array.isArray(data.items)) {
-            data.items.forEach((entry, idx) => {
-              const vid = extractYouTubeId(entry.link) || (entry.guid ? entry.guid.split(':').pop() : '');
-              if (vid && vid.length === 11) {
-                byId.set(vid, {
-                  cronOrder: idx,
-                  id: vid,
-                  url: `https://www.youtube.com/watch?v=${vid}`,
-                  title: entry.title,
-                  categories: inferCategoriesFromTitle(entry.title),
-                  duration: "",
-                  viewsText: "",
-                  viewsNum: 0,
-                  dateText: formatSpanishDate(entry.pubDate)
-                });
-              }
-            });
-          }
-        }
-      } catch (_) {
-        // Si falla la red externa, continúa con repertorio-videos.html
+        const res = await fetch('repertorio-videos.html?v=' + Date.now());
+        if (!res.ok) throw new Error('No se encontró repertorio-videos.html');
+        const htmlText = await res.text();
+        const doc = new DOMParser().parseFromString(htmlText, 'text/html');
+        const items = [...doc.querySelectorAll('#lista-repertorio li')];
+
+        const foundCats = new Set();
+
+        VIDEOS_LIST = items.map((li, index) => {
+          const rawUrl = (li.getAttribute('data-url') || '').trim();
+          const vid = extractYouTubeId(rawUrl);
+          const cats = (li.getAttribute('data-categoria') || 'General')
+            .split(',')
+            .map(c => c.trim())
+            .filter(Boolean);
+
+          cats.forEach(c => foundCats.add(c));
+          const viewsText = (li.getAttribute('data-vistas') || '').trim();
+
+          return {
+            cronOrder: index,
+            id: vid,
+            url: rawUrl,
+            title: li.textContent.trim(),
+            categories: cats,
+            duration: (li.getAttribute('data-duracion') || '').trim(),
+            viewsText: viewsText,
+            viewsNum: parseViewsCount(viewsText),
+            dateText: (li.getAttribute('data-fecha') || '').trim()
+          };
+        }).filter(v => v.title && v.id);
+
+        // Ordenar pestañas respetando jerarquía principal y agregando cualquier categoría nueva futura
+        const extraCats = [...foundCats].filter(c => !CATEGORY_ORDER.includes(c));
+        ALL_CATEGORIES = [...CATEGORY_ORDER.filter(c => c === "Todos" || foundCats.has(c)), ...extraCats];
+
+        renderCategoryPills();
+        renderVideos();
+      } catch (err) {
+        resultsCounterEl.textContent = "Error al leer repertorio-videos.html";
       }
-
-      // B) Leer repertorio-videos.html para enriquecer duraciones, vistas, categorías manuales y agregar históricos con ID real
-      try {
-        const repRes = await fetch('repertorio-videos.html?v=' + Date.now());
-        if (repRes.ok) {
-          const htmlText = await repRes.text();
-          const doc = new DOMParser().parseFromString(htmlText, 'text/html');
-          const items = [...doc.querySelectorAll('#lista-repertorio li')];
-
-          items.forEach((li, index) => {
-            const rawUrl = (li.getAttribute('data-url') || '').trim();
-            const vid = extractYouTubeId(rawUrl);
-            // Solo incluimos entradas que tengan ID real de video de YouTube (así SIEMPRE tienen miniatura original)
-            if (!vid) return;
-
-            const cats = (li.getAttribute('data-categoria') || '')
-              .split(',')
-              .map(c => c.trim())
-              .filter(Boolean);
-            const viewsText = (li.getAttribute('data-vistas') || '').trim();
-            const duration = (li.getAttribute('data-duracion') || '').trim();
-            const dateText = (li.getAttribute('data-fecha') || '').trim();
-            const title = li.textContent.trim();
-
-            if (byId.has(vid)) {
-              const existing = byId.get(vid);
-              if (cats.length) existing.categories = cats;
-              if (duration) existing.duration = duration;
-              if (viewsText) {
-                existing.viewsText = viewsText;
-                existing.viewsNum = parseViewsCount(viewsText);
-              }
-              if (!existing.dateText && dateText) existing.dateText = dateText;
-            } else {
-              byId.set(vid, {
-                cronOrder: 100 + index,
-                id: vid,
-                url: `https://www.youtube.com/watch?v=${vid}`,
-                title: title,
-                categories: cats.length ? cats : inferCategoriesFromTitle(title),
-                duration: duration,
-                viewsText: viewsText,
-                viewsNum: parseViewsCount(viewsText),
-                dateText: dateText
-              });
-            }
-          });
-        }
-      } catch (_) {}
-
-      VIDEOS_LIST = Array.from(byId.values()).sort((a, b) => a.cronOrder - b.cronOrder);
-
-      const catSet = new Set();
-      VIDEOS_LIST.forEach(v => v.categories.forEach(c => catSet.add(c)));
-      ALL_CATEGORIES = ["Todos", ...Array.from(catSet)];
-
-      renderCategoryPills();
-      renderVideos();
     }
 
     function renderCategoryPills() {
@@ -1132,10 +1003,10 @@
         filtered.sort((a, b) => a.cronOrder - b.cronOrder);
       }
 
-      resultsCounterEl.textContent = `Mostrando ${filtered.length} publicaciones destacadas con reproducción directa`;
+      resultsCounterEl.textContent = `Mostrando ${filtered.length} de ${VIDEOS_LIST.length} videos publicados`;
 
       if (filtered.length === 0) {
-        videosGridEl.innerHTML = `<p style="grid-column:1/-1;padding:30px 0;color:var(--ink-muted);">No hay videos que coincidan con ese filtro.</p>`;
+        videosGridEl.innerHTML = `<p style="grid-column:1/-1;padding:30px 0;color:var(--ink-muted);">No hay videos que coincidan con esa búsqueda.</p>`;
         return;
       }
 
@@ -1157,7 +1028,7 @@
                   <h3 data-play-id="${v.id}" data-play-title="${safeTitle}">${v.title}</h3>
                 </div>
                 <div class="video-meta-row">
-                  <span>${metaInfo || 'Canal @abogadomanriquez'}</span>
+                  <span>${metaInfo}</span>
                   <div class="video-actions-inline">
                     <button type="button" class="btn-play-here" data-play-id="${v.id}" data-play-title="${safeTitle}">Reproducir ▶</button>
                     <a href="${v.url}" target="_blank" rel="noopener" class="link-yt-direct">YouTube ↗</a>
@@ -1210,7 +1081,7 @@
       if (e.key === 'Escape' && modal.classList.contains('open')) closeVideoModal();
     });
 
-    loadHybridCatalog();
+    loadRepertorio();
   </script>
 </body>
 </html>
